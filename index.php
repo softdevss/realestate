@@ -640,8 +640,31 @@ else
         <div class="contact-form">
           <span class="circle one"></span>
           <span class="circle two"></span>
+<!-- insert contact us -->
+        <?php
 
-          <form action="index.html" autocomplete="off">
+if(isset($_POST['submit'])){
+    
+  $fullname = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];      
+  $message = $_POST['message'];
+    
+    
+//    move_uploaded_file($post_image_temp, "../images/$post_image" );
+    
+$query = "INSERT INTO contactus (fullname, email, phone, message) ";
+$query .= "VALUES('{$fullname}','{$email}','{$phone}','{$message}') ";
+
+    $create_user_query = mysqli_query($connection, $query);
+    
+    echo "User Created: " . " " . "<a href='users.php'>View Users</a> ";
+    
+}
+
+?>
+
+          <form action="index.php" method="POST" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
@@ -663,7 +686,7 @@ else
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" class="btn" name="submit">
           </form>
         </div>
       </div>

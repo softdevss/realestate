@@ -45,6 +45,7 @@
    
 
     <a href="./add_house.php">ADD HOUSE</a>
+    <a href="../contact.php">Messages</a>
 </center>
 
     <header class="header">
