@@ -36,7 +36,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
+  <!--Sweetalert-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -85,10 +87,16 @@
     
    if(isset($_REQUEST['btn_login']))
    {
+
+    
    	$email =$_REQUEST["txt_email"];
    	$password =$_REQUEST["txt_password"];
    	$role =$_REQUEST["txt_role"];
 
+     echo '<script type="text/javascript">
+     swal("", "Invalid Email or Password", "error");
+     </script>';
+   
    	if(empty($email)){
    		$errorMsg[]="Please Enter Email";
    	}
@@ -128,6 +136,9 @@
 						case "admin":
 						$_SESSION["admin_login"]=$email;
 						$loginMsg="Admin... Successfully Login....";
+            echo '<script type="text/javascript">
+            swal("", "Successfully Login to Admin", "success");
+            </script>';
 						header("refresh:1;admin/admin_home.php");
         
 						break;
@@ -135,12 +146,18 @@
 						case "employee":
 						$_SESSION["employee_login"]=$email;
 						$loginMsg="Employee... Successfully Login....";
+            echo '<script type="text/javascript">
+            swal("", "Successfully Login to Employee", "success");
+            </script>';
 						header("refresh:1;employee/employee_home.php");
 						break;
 
 						case "user":
 						$_SESSION["user_login"]=$email;
 						$loginMsg="User... Successfully Login....";
+            echo '<script type="text/javascript">
+            swal("", "Successfully Login to Client", "success");
+            </script>';
 						header("refresh:1;user/user_home.php");
 						break;
 						
@@ -165,7 +182,7 @@
 }
 	catch(PDOException $e)
 	{
-		e->getMessage();
+		$e->getMessage();
 	}
 }
 else
@@ -204,7 +221,7 @@ else
                     <label class="radio__label " for="radio2">AGENT</label>
                     <input class="radio__input" value="admin" type="radio" name="txt_role" id="radio3">
                     <label class="radio__label " for="radio3">ADMIN</label>
-
+     
                
              </div>
            
@@ -214,18 +231,13 @@ else
                 required>
                 <input type="password" class="input-field" name="txt_password" placeholder="PASSWORD"
                 required>
+                <span>Don't have account ? <a href="register.php" >Sign up here</a></span>
                 <button type="submit" name="btn_login" class="submit-btn" style="color:white">SIGN IN</button>
                  
 
-</form>
+            </form>
+            
  </div>   
-
-            <div class="form-group">
-    			<div class="col-sm-offset-3 col-sm-9 m-t-15">
-    		You don't have a account register here? <a href="register.php"><p class="text-info">Register Account</p></a>
-
-    	</div>
-    </div>
 
 
               
@@ -624,8 +636,31 @@ else
         <div class="contact-form">
           <span class="circle one"></span>
           <span class="circle two"></span>
+<!-- insert contact us -->
+        <?php
 
-          <form action="index.html" autocomplete="off">
+if(isset($_POST['submit'])){
+    
+  $fullname = $_POST['name'];
+  $email = $_POST['email'];
+  $phone = $_POST['phone'];      
+  $message = $_POST['message'];
+    
+    
+//    move_uploaded_file($post_image_temp, "../images/$post_image" );
+    
+$query = "INSERT INTO contactus (fullname, email, phone, message) ";
+$query .= "VALUES('{$fullname}','{$email}','{$phone}','{$message}') ";
+
+    $create_user_query = mysqli_query($connection, $query);
+    
+    echo "User Created: " . " " . "<a href='users.php'>View Users</a> ";
+    
+}
+
+?>
+
+          <form action="index.php" method="POST" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
               <input type="text" name="name" class="input" />
@@ -647,7 +682,7 @@ else
               <label for="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" class="btn" />
+            <input type="submit" value="Send" class="btn" name="submit">
           </form>
         </div>
       </div>
