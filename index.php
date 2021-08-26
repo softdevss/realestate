@@ -36,7 +36,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-
+  <!--Sweetalert-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -85,10 +87,16 @@
     
    if(isset($_REQUEST['btn_login']))
    {
+
+    
    	$email =$_REQUEST["txt_email"];
    	$password =$_REQUEST["txt_password"];
    	$role =$_REQUEST["txt_role"];
 
+     echo '<script type="text/javascript">
+     swal("", "Invalid Email or Password", "error");
+     </script>';
+   
    	if(empty($email)){
    		$errorMsg[]="Please Enter Email";
    	}
@@ -128,18 +136,27 @@
 						case "admin":
 						$_SESSION["admin_login"]=$email;
 						$loginMsg="Admin... Successfully Login....";
+            echo '<script type="text/javascript">
+            swal("", "Successfully Login to Admin", "success");
+            </script>';
 						header("refresh:1;admin/admin_home.php");
 						break;
 
 						case "employee":
 						$_SESSION["employee_login"]=$email;
 						$loginMsg="Employee... Successfully Login....";
+            echo '<script type="text/javascript">
+            swal("", "Successfully Login to Employee", "success");
+            </script>';
 						header("refresh:1;employee/employee_home.php");
 						break;
 
 						case "user":
 						$_SESSION["user_login"]=$email;
 						$loginMsg="User... Successfully Login....";
+            echo '<script type="text/javascript">
+            swal("", "Successfully Login to Client", "success");
+            </script>';
 						header("refresh:1;user/user_home.php");
 						break;
 						
@@ -164,7 +181,7 @@
 }
 	catch(PDOException $e)
 	{
-		e->getMessage();
+		$e->getMessage();
 	}
 }
 else
