@@ -230,18 +230,13 @@ else
                 required>
                 <input type="password" class="input-field" name="txt_password" placeholder="PASSWORD"
                 required>
+                <span>Don't have account ? <a href="register.php" >Sign up here</a></span>
                 <button type="submit" name="btn_login" class="submit-btn" style="color:white">SIGN IN</button>
                  
 
-</form>
+            </form>
+            
  </div>   
-
-            <div class="form-group">
-    			<div class="col-sm-offset-3 col-sm-9 m-t-15">
-    		You don't have a account register here? <a href="register.php"><p class="text-info">Register Account</p></a>
-
-    	</div>
-    </div>
 
 
               
