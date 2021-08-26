@@ -164,7 +164,7 @@
 }
 	catch(PDOException $e)
 	{
-		e->getMessage();
+		$e->getMessage();
 	}
 }
 else
