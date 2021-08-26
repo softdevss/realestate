@@ -50,7 +50,7 @@
 
     <header class="header">
             <div class="header__container">
-                <img src="assets/img/admin-jeremy.jpg" alt="" class="header__img">
+                <img src="../assets/img/admin-jeremy.jpg" alt="" class="header__img">
                 <?php
         include '../connection.php';
         $sql = "SELECT username, role FROM masterlogin WHERE role='admin'";

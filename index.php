@@ -220,7 +220,7 @@ else
                     <label class="radio__label " for="radio2">AGENT</label>
                     <input class="radio__input" value="admin" type="radio" name="txt_role" id="radio3">
                     <label class="radio__label " for="radio3">ADMIN</label>
-
+     
                
              </div>
            
