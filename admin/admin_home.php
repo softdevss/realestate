@@ -41,6 +41,8 @@
     <a href="../logout.php">Logout</a>
 
     <a href="./add_house.php">ADD HOUSE</a>
+    <br>
+    <a href="./view.all.php">View All</a>
 </center>
 		</body>
         </html>

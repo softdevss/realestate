@@ -827,7 +827,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
 
     this.isShown = true
 
-    this.escape()
+    this.()
 
     this.$element.on('click.dismiss.bs.modal', '[data-dismiss="modal"]', $.proxy(this.hide, this))
 
@@ -875,7 +875,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
 
     this.isShown = false
 
-    this.escape()
+    this.()
 
     $(document).off('focusin.bs.modal')
 
@@ -901,7 +901,7 @@ if (typeof jQuery === 'undefined') { throw new Error('Bootstrap requires jQuery'
       }, this))
   }
 
-  Modal.prototype.escape = function () {
+  Modal.prototype. = function () {
     if (this.isShown && this.options.keyboard) {
       this.$element.on('keyup.dismiss.bs.modal', $.proxy(function (e) {
         e.which == 27 && this.hide()

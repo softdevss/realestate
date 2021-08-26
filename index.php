@@ -72,7 +72,7 @@
 
     if(isset($_SESSION["admin_login"]))
 {
-	header("location: admin/admin_home.php");
+      header("location: admin/admin_home.php");
 }  
 	if(isset($_SESSION["employee_login"]))
 {
@@ -129,6 +129,7 @@
 						$_SESSION["admin_login"]=$email;
 						$loginMsg="Admin... Successfully Login....";
 						header("refresh:1;admin/admin_home.php");
+        
 						break;
 
 						case "employee":
