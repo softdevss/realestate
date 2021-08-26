@@ -50,6 +50,7 @@
         ?>
     </h3>
     <a href="../logout.php">Logout</a>
+	
 
 
 				
@@ -84,10 +85,10 @@
 				}
 			?>
 						
-						
 
 					</div>
 				</li>
 </center>
+
 		</body>
         </html>

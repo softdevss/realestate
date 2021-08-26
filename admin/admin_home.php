@@ -13,8 +13,7 @@
 
 
 <center>
-	
-	<h1> Admin Page</h1>
+
 
 	<h3>
 
@@ -36,16 +35,13 @@
         if(isset($_SESSION['admin_login']))
         {
             ?>
-            Welcome,
+        
         <?php
-        echo $_SESSION['admin_login'];
+    
         }
         ?>
     </h3>
    
-
-    <a href="./add_house.php">ADD HOUSE</a>
-    <a href="../contact.php">Messages</a>
 </center>
 
     <header class="header">
@@ -106,9 +102,9 @@
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="#" class="nav__dropdown-item">ADD PROPERTIES</a>
+                                        <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
                                         <a href="#" class="nav__dropdown-item">DELETE</a>
-                                        <a href="#" class="nav__dropdown-item">MANAGE</a>
+                                        <a href="./house_management.php" class="nav__dropdown-item">MANAGE</a>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +113,17 @@
                                 <i class='bx bx-message-rounded nav__icon' ></i>
                                 <span class="nav__name">CLIENTS</span>
                             </a>
+                        
+
+                        <a href="../contact.php" class="nav__link">
+                                <i class='bx bx-message-rounded nav__icon' ></i>
+                                <span class="nav__name">CLIENTS INQUIRIES</span>
+                            </a>
                         </div>
+                    
+                    
+
+
     
                         <div class="nav__items">
                             <h3 class="nav__subtitle">AGENTS</h3>
