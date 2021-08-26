@@ -35,8 +35,8 @@
             header("location: ../employee/employee_home.php");
         }
 
-        if(isset($_SESSION['user_login']))
-        {
+        if(isset($_SESSION['user_login'])){
+
             ?>
            <section class="caption">
 				<h2 class="caption" style="text-align: center"><font color="blue">This is The Best Place To Find A Property of Your Choice</font></h2>
@@ -44,7 +44,9 @@
         <?php
         echo $_SESSION['user_login'];
         }
-        
+
+		
+		
         ?>
     </h3>
     <a href="../logout.php">Logout</a>
@@ -64,11 +66,14 @@
 						$sel = "SELECT * FROM houses WHERE status = 'Available'";
 						$rs = $connection->query($sel);
 						while($rws = $rs->fetch_assoc()){
+
+					
+?>
 							
-			?>
+		
 				<li>
 					<a href="book_House.php?id=<?php echo $rws['house_id'] ?>">
-						<img class="thumb" src="house_images/<?php echo $rws['image'];?>" width="300" height="200">
+						<img src="../house_images/<?php echo $rws['image'];?>" width="300" height="200">
 					</a>
 					<span class="price"><?php echo ''.$rws['rent_cost'];?></span>
 					<div class="property_details">
