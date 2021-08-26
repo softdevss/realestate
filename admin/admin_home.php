@@ -24,6 +24,7 @@
 
         if(!isset($_SESSION['admin_login']))
         {
+           
             header("location: ../index.php");
         }
 
@@ -49,9 +50,23 @@
     <header class="header">
             <div class="header__container">
                 <img src="assets/img/perfil.jpg" alt="" class="header__img">
-
-                <a href="#" class="header__logo">SAKURA YANSON</a>
+                <?php
+        include '../connection.php';
+        $sql = "SELECT username, role FROM masterlogin WHERE role='admin'";
+        $result = $connection->query($sql);
+        if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) { 
+            ?>
+                <a href="#" class="header__logo"> <?php echo " ". $row["username"]. "  <br>";?></a>
+                <?php
+            }
+        } else {
+          echo "0 results";
+        }
+        ?>
     
+            
                 <div class="header__search">
                     <input type="search" placeholder="Search" class="header__input">
                     <i class='bx bx-search header__icon'></i>
