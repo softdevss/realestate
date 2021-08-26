@@ -14,7 +14,7 @@
 
 <center>
 	
-	<h1> Admin Page</h1>
+	
 
 	<h3>
 
@@ -35,15 +35,15 @@
         if(isset($_SESSION['admin_login']))
         {
             ?>
-            Welcome,
+          
         <?php
-        echo $_SESSION['admin_login'];
+        
         }
         ?>
     </h3>
    
 
-    <a href="./add_house.php">ADD HOUSE</a>
+  
 </center>
 
     <header class="header">
@@ -90,7 +90,7 @@
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="#" class="nav__dropdown-item">ADD PROPERTIES</a>
+                                        <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
                                         <a href="#" class="nav__dropdown-item">DELETE</a>
                                         <a href="#" class="nav__dropdown-item">MANAGE</a>
                                     </div>

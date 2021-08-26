@@ -190,7 +190,7 @@ img {
 }
 
 .nav__link:hover {
-  color: var(--first-color);
+  color:#0e153a8c;
 }
 
 .nav__icon {
