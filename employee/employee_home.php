@@ -48,6 +48,7 @@
 
     <a href="./add_house.php">ADD HOUSE</a>
     <a href="./house_management.php">VIEW PROPERTY</a>
+    <a href="../contact.php">View Messages</a>
 </center>
 		</body>
         </html>
