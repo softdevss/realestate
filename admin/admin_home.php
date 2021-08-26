@@ -48,11 +48,12 @@
                 <img src="../assets/img/admin-jeremy.jpg" alt="" class="header__img">
                 <?php
         include '../connection.php';
-        $sql = "SELECT username, role FROM masterlogin WHERE role='admin'";
-        $result = $connection->query($sql);
+        $query = "SELECT username, role FROM masterlogin WHERE role='admin'";
+        $result = $connection->query($query);
         if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) { 
+
             ?>
                 <a href="#" class="header__logo"> <?php echo " ". $row["username"]. "  <br>";?></a>
                 <?php
@@ -102,7 +103,6 @@
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
                                         <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
-                                        <a href="#" class="nav__dropdown-item">DELETE</a>
                                         <a href="./house_management.php" class="nav__dropdown-item">MANAGE</a>
                                     </div>
                                 </div>
