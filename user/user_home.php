@@ -69,8 +69,7 @@
 
 					
 ?>
-							
-		
+						
 				<li>
 					<a href="book_House.php?id=<?php echo $rws['house_id'] ?>">
 						<img src="../house_images/<?php echo $rws['image'];?>" width="300" height="200">

@@ -2,7 +2,7 @@
 $db_host="localhost";
 $db_user="root";
 $db_password="";
-$db_name="RCY"; 
+$db_name="php_multiplelogin"; 
 
 
 try
