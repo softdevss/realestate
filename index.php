@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <script src="scripts/jquery.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="MUSA" >
     <link rel="shortcut icon" href="assets/ico/favicon.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+ 
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+
     <title>RCY Real Homes</title>
 
     <!-- Bootstrap core CSS -->
@@ -67,15 +72,24 @@
 <!-- Modal === --->
 
 <?php
-
-    require_once 'connection.php';
-
+  include "controller.php";
     session_start();
+    require_once "connection.php";
 
-    if(isset($_SESSION["admin_login"]))
-{
-      header("location: admin/admin_home.php");
-}  
+  
+    // $query = "SELECT * FROM masterlogin";
+    // $dissable = mysqli_query($connection,$query);
+    // while($row = mysqli_fetch_assoc($dissable)){
+    // $status = $row['status'];
+
+    // if($status == 'dissable'){
+    //   header("Location: index.php");
+    // } 
+    // }
+if(isset($_SESSION["admin_login"])){
+
+  header("location: admin/admin_home.php");
+}
 	if(isset($_SESSION["employee_login"]))
 {
 	header("location: employee/employee_home.php");
@@ -88,7 +102,8 @@
    if(isset($_REQUEST['btn_login']))
    {
 
-    
+    admin_dissable();
+
    	$email =$_REQUEST["txt_email"];
    	$password =$_REQUEST["txt_password"];
    	$role =$_REQUEST["txt_role"];
@@ -236,11 +251,7 @@ else
                  
 
             </form>
-            
- </div>   
-
-
-              
+           </div>     
         </div>
 		
 				</div>
@@ -258,19 +269,7 @@ else
 				</div>
 	    </div>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         <!-- /headerwrap -->
 
 		<!-- ==== GREYWRAP ==== -->

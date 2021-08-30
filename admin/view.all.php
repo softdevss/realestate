@@ -20,52 +20,46 @@ session_start();
     include "../connection.php";            
                     if(isset($_POST['checkBoxArray'])){
                         
-                       foreach($_POST['checkBoxArray'] as $postValueId){
-                           
-                          $bulk_options = $_POST['bulk_options'];
-                           
-                           switch($bulk_options){
-                           
+                        foreach($_POST['checkBoxArray'] as $postValueId){
+                            
+                            $bulk_options = $_POST['bulk_options'];
+                            
+                            switch($bulk_options){
+                            
                             case 'dissable':
-               
+
                                 $query = "UPDATE masterlogin SET status = '{$bulk_options}' WHERE id = {$postValueId} ";
-                                   $update_to_dissable_status = mysqli_query($connection, $query);
-                                   if(!$update_to_dissable_status){
-                    
-                                       die('QUERY FAILED' . mysqli_error($connection));
-                    
-                                       
-                                   }
-                                   
+                                    $update_to_dissable_status = mysqli_query($connection, $query);
+                                    if(!$update_to_dissable_status){
+
+                                        die('QUERY FAILED' . mysqli_error($connection));
+
+                                        
+                                    }
                                 break;   
-
-
+                                
                                 case 'enable':
-               
-                                    $query = "UPDATE masterlogin SET status = '{$bulk_options}' WHERE id = {$postValueId} ";
-                                       $update_to_enable_status = mysqli_query($connection, $query);
-                                       if(!$update_to_enable_status){
-                        
-                                           die('QUERY FAILED' . mysqli_error($connection));
-                              
-                                       }
-                                       
-                                    break; 
-                                   }
-                                }
-                                 
-                             
 
+                                    $query = "UPDATE masterlogin SET status = '{$bulk_options}' WHERE id = {$postValueId} ";
+                                        $update_to_enable_status = mysqli_query($connection, $query);
+                                        if(!$update_to_enable_status){
+                        
+                                            die('QUERY FAILED' . mysqli_error($connection));
+                                
+                                        }
+                                        
+                                    break; 
+                                    }
+                                }
                             }
 
                             $query = "SELECT * FROM masterlogin WHERE status = 'enable' ";
-                            $select_all_enable_post = mysqli_query($connection, $query);   
+                            $select_all_enable_post = mysqli_query($connection, $query);
                             $post_enable_count = mysqli_num_rows($select_all_enable_post);
 
                             $query = "SELECT * FROM masterlogin WHERE status = 'dissable' ";
                             $select_all_dissable_post = mysqli_query($connection, $query);   
                             $post_dissable_count = mysqli_num_rows($select_all_dissable_post);
-
 
                            $query = "SELECT * FROM masterlogin";
                            $checkstatus = mysqli_query($connection,$query);
@@ -77,9 +71,9 @@ session_start();
                             if($status == 'enable'){
                                 $activeText = "Enable";
 
-                            }elseif($status == 'disable'){
+                            }elseif($status == 'dissable'){
 
-                                $activeText = "Disable";
+                                $activeText = "Dissable";
                             }
                         
                         }
@@ -133,6 +127,8 @@ session_start();
                 $status  = $row['status'];
 
                                 
+
+                
                 echo "<tr>";   
                 ?>
                 <td><input class='checkBoxes' type='checkbox' name='checkBoxArray[]' value="<?php echo $id; ?>"></td>
