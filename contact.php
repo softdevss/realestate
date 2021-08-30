@@ -17,32 +17,57 @@
 <body>
     <table class="table table-bordered">
         <tr>
-            <th>Id</th>
+           
             <th>Fullname</th>
             <th>Email</th>
             <th>Phone</th>
             <th>Messages</th>
+            <th>Delete</th>
         </tr>
         
         <?php
-           $conn = mysqli_connect("localhost", "root", "", "php_multiplelogin");
-           $sql = "SELECT * FROM contactus";
-           $result = $conn->query($sql);
+           include("connection.php");
+           error_reporting(0);
+           $query = "SELECT * FROM contactus";
+           $data=mysqli_query($connection,$query);
+           $total=mysqli_num_rows($data);
+           
 
-           if($result->num_rows > 0) {
-               while($row = $result-> fetch_assoc()){
-                   echo "<tr><td>" . $row["id"] . "</td><td>" . $row["fullname"] . "</td><td>" . $row["email"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["message"] . "</td></tr>";
+         
+           //echo $total;
 
-               }
+           if($total!=0)
+           {
+              
+              while($result=mysqli_fetch_assoc($data))
+              {
+                  echo "
+                  <tr>
+                 
+                  <td>".$result['fullname']."</td>
+                  <td>".$result['email']."</td>
+                  <td>".$result['phone']."</td>
+                  <td>".$result['message']."</td>
+                  <td><a href='delete.php?rn=$result[id]' onclick='return
+                  checkdelete()'>Delete</td>
+                  </tr>
+                  ";
+              }
            }
            else {
-               echo "No Result";
+               echo "No records";
            }
-           $conn->close();
 
         ?>
 
     </table>
 </div>
+<script>
+    function checkdelete()
+    {
+        return Confirm ('Are you sure you want to Delete this Message ?');
+
+    }
+</script>
 </body>
 </html>
