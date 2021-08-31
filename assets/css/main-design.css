@@ -2,8 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+  
 }
-
+html{
+      overflow-x: hidden;
+}
     :root{
         font-size: 100%;
         font-size: 16px;
@@ -16,10 +19,14 @@
         font-family: 'Montserrat' , sans-serif;
         font-weight: 500;
     }
-    section .copy h2{
-         font-size: 2.25rem;
+    .copy h2{
+         font-size: 2.3rem;
         font-weight: 700;
     }
+    .copy p{
+        font-size: 1.1rem;
+       font-weight: 700;
+   }
     a{
         text-decoration: none;
         color: var(--blue);
@@ -28,6 +35,7 @@
         text-decoration: underline;
     }
     .copy-legal p{
+        font-size: 2rem;
         font-size: 80%;
         text-align: center;
     }
@@ -50,7 +58,7 @@
     }
 
     .left{
-        background-image: linear-gradient(90deg, rgba(0,0,0,0.35898109243697474) 0%, rgba(0,0,0,0.4458158263305322) 100%),url('../gatercy.jpg');
+        background-image:linear-gradient(90deg, rgba(0,0,0,0.4962359943977591) 0%, rgba(0,0,0,0.58783263305322133) 100%), url('gatercy.jpg');
         background-size: cover;
        background-position: center;
        background-repeat: no-repeat;
@@ -89,10 +97,16 @@ form input[type=text], input[type=email], input[type=password]{
     outline: none;
     box-sizing: border-box;
 } 
+form input:focus{
+  border: 1px solid var(--primary-pink);
+  
+}
 label{
     display: block;
     margin-bottom: 0.5rem;
     font-size: 0.75rem;
+    color: rgb(87, 87, 87);
+    
 
 }
 
@@ -141,5 +155,40 @@ label{
             height: auto;
 
         }
+        
+    }
+    @media screen and (max-width:568px) {
+        .split-screen .left{
+            display: none;
+        }
+    }
+
+    /*ADD ADD HOUSE PROPERTIES*/
+
+    .large-container{
+     
+       width: 70vw;
+       display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+        margin: 2rem auto;
+       
+    }
+
+    .form-container-1{
+          flex: 1;
+            margin: 1rem;
+    }
+    .form-container-2{
+        flex: 1;
+        margin: 1rem;
+    }
+    .form-con {
+      width: 100%;
+    }
+
+    @media screen and (max-width:600px) {
+       
+       
         
     }
