@@ -41,14 +41,15 @@
                                 <div class="input-container password">
                                     <label for="password">Password</label>
                                     <input type="password"  id="password" name="password" placeholder="Must be at least 6 characters">
-                                    <i class='bx bx-show'></i>
+                                    <i class='bx bx-hide'></i>
                                 </div>
                                
                                 <div class="input-container cta">
                                         <button class="signup-btn">Sign up </button>
                                 </div>
                                 <section class="copy-legal">
-                                    <p>By countinuing, you accept to agree out <a href="">Privacy policy</a>&amp; <a href="">Terms of service</a></p>
+                                    <p>By countinuing, you accept to agree out <br>
+                                     <a href="">Privacy policy</a>&amp; <a href="">Terms of service</a></p>
                                 </section>
                             </form>
 

@@ -45,11 +45,101 @@
         align-items: center;
 
     }
-
-    .left{
-        
-        background-size: cover;
-    
+    .right{
+        margin: 1rem;
     }
 
+    .left{
+        background-image: linear-gradient(90deg, rgba(0,0,0,0.35898109243697474) 0%, rgba(0,0,0,0.4458158263305322) 100%),url('../gatercy.jpg');
+        background-size: cover;
+       background-position: center;
+       background-repeat: no-repeat;
     
+    }
+.left .copy{
+    color: #fff;
+    text-align: center;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+
+}
+.left p{
+    font-weight: 400;
+}
+.right .copy{
+    color: black;
+    text-align: center;
+}
+.right .copy p {
+    margin: 1.5em 0;
+}
+
+.right form{
+    width: 438px;
+}
+
+form input[type=text], input[type=email], input[type=password]{
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    border:1px solid #c4c4c4;
+    padding: 1rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    outline: none;
+    box-sizing: border-box;
+} 
+label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+
+}
+
+.input-container.password{
+    position: relative;
+
+}
+.input-container.password i{
+    position: absolute;
+    top: 42px;
+    right: 16px;
+    color: grey;
+
+
+}
+.login-container{
+    text-align: center;
+}
+    .signup-btn{
+        display: block;
+        width: 100%;
+        background: var(--primary-pink);
+        color: #fff;
+        font-weight: 700;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .signup-btn:hover{
+       background-color: #ff4388;
+    }
+    @media screen and (min-width:900px){
+        .split-screen{
+            flex-direction: row;
+            height: 100vh;
+
+        }
+        .left , .right{
+            display: flex;
+            width: 50%;
+            height: auto;
+
+        }
+        
+    }
