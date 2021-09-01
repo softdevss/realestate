@@ -1,3 +1,23 @@
+<?php
+    include_once '../includes/dbprocess.php';
+
+
+    if(isset($_SESSION['nameHolder'])){
+        if($_SESSION['usertypeHolder'] == 'Employee'){
+            header("Location: ../employee/employee_home.php");
+
+        }
+        else if($_SESSION['usertypeHolder'] == 'User'){
+            header("Location: ../user/user_home.php");
+        }else{
+            //wala ng header kasi nasa admin naman na tong page na to
+        }
+    }else{
+        header("Location: ../index.php");
+      
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,6 +26,8 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+  
     <title>RCY Real Homes</title>
     </head>
 
@@ -16,29 +38,6 @@
 
 	<h3>
 
-		<?php
-
-		session_start();
-
-        if(!isset($_SESSION['admin_login']))
-        {
-           
-            header("location: ../index.php");
-        }
-
-        if(isset($_SESSION['employee_login']))
-        {
-            header("location: ../employee/employee_home.php");
-        }
-
-        if(isset($_SESSION['admin_login']))
-        {
-            ?>
-        
-        <?php
-    
-        }
-        ?>
     </h3>
    
 </center>
@@ -46,23 +45,12 @@
     <header class="header">
             <div class="header__container">
                 <img src="../assets/img/admin-jeremy.jpg" alt="" class="header__img">
-                <?php
-        include '../connection.php';
-        $query = "SELECT username, role FROM masterlogin WHERE role='admin'";
-        $result = $connection->query($query);
-        if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) { 
-
-            ?>
-                <a href="#" class="header__logo"> <?php echo " ". $row["username"]. "  <br>";?></a>
-                <?php
-            }
-        } else {
-          echo "0 results";
-        }
-        ?>
-    
+               
+                <?php $nameHolder = $_SESSION['nameHolder']; ?>
+                <a href="#" class="header__logo"> <?php echo $nameHolder ?></a>
+            
+                <h5></h5>
+               
             
                 <div class="header__search">
                     <input type="search" placeholder="Search" class="header__input">
@@ -153,6 +141,14 @@
                                 <i class='bx bx-bookmark nav__icon' ></i>
                                 <span class="nav__name">REPORTS</span>
                             </a>
+                            <a href="database.php" class="nav__link">
+                                <i class='bx bx-data nav__icon' ></i>
+                                <span class="nav__name">DATABASE</span>
+                            </a>
+                            <a href="account.php" class="nav__link">
+                                <i class='bx bx-user nav__icon' ></i>
+                                <span class="nav__name">ACCOUNT</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -168,3 +164,7 @@
 
         <script src="./menu.js"></script>
         </html>
+
+
+
+

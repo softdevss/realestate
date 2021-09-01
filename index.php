@@ -1,3 +1,23 @@
+<?php
+    include_once './includes/dbprocess.php';
+
+    if(isset($_SESSION['nameHolder'])){
+        if($_SESSION['usertypeHolder'] == 'User'){
+            header("Location: ../user/user_home.php");
+        }
+        else if($_SESSION['usertypeHolder'] == 'Employee'){
+            header("Locaton: ../employee/employee_home.php");
+        }else{
+            header("Location: ../admin/admin_home.php");
+        }
+    }else{
+       // header("Location: ../index.php");
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -71,145 +91,6 @@
  
 <!-- Modal === --->
 
-<?php
-  include "controller.php";
-    session_start();
-    require_once "connection.php";
-
-  
-    // $query = "SELECT * FROM masterlogin";
-    // $dissable = mysqli_query($connection,$query);
-    // while($row = mysqli_fetch_assoc($dissable)){
-    // $status = $row['status'];
-
-    // if($status == 'dissable'){
-    //   header("Location: index.php");
-    // } 
-    // }
-if(isset($_SESSION["admin_login"])){
-
-  header("location: admin/admin_home.php");
-}
-	if(isset($_SESSION["employee_login"]))
-{
-	header("location: employee/employee_home.php");
-}    
-	if(isset($_SESSION["user_login"]))
-{
-	header("location: user/user_home.php");
-}    				
-    
-   if(isset($_REQUEST['btn_login']))
-   {
-
-    admin_dissable();
-
-   	$email =$_REQUEST["txt_email"];
-   	$password =$_REQUEST["txt_password"];
-   	$role =$_REQUEST["txt_role"];
-
-     echo '<script type="text/javascript">
-     swal("", "Invalid Email or Password", "error");
-     </script>';
-   
-   	if(empty($email)){
-   		$errorMsg[]="Please Enter Email";
-   	}
-   	else if(empty($password)){
-   		$errorMsg[]="Please Enter Password";
-   	}
-   	else if(empty($role)){
-   		$errorMsg[]="Please Select Role";
-   	}
-   	else if($email AND $password AND $role)
-{
-	try
-	{
-		$select_stmt=$db->prepare("SELECT email,password,role FROM masterlogin
-			WHERE
-			email=:uemail AND password=:upassword AND role=:urole");
-		$select_stmt->bindParam(":uemail",$email);
-		$select_stmt->bindParam(":upassword",$password);
-		$select_stmt->bindParam(":urole",$role);
-		$select_stmt->execute();
-
-		while($row=$select_stmt->fetch(PDO::FETCH_ASSOC))
-			{
-				$dbemail =$row["email"];
-				$dbpassword =$row["password"];
-				$dbrole =$row["role"];
-		}
-		if($email!=null AND $password!=null AND $role!=null)
-		{
-			if($select_stmt->rowCount()>0)
-		{
-				if($email==$dbemail AND $password==$dbpassword AND $role==$dbrole)
-				{
-					switch ($dbrole) 
-
-					{
-						case "admin":
-						$_SESSION["admin_login"]=$email;
-						$loginMsg="Admin... Successfully Login....";
-            echo '<script type="text/javascript">
-            swal("", "Successfully Login to Admin", "success");
-            </script>';
-						header("refresh:1;admin/admin_home.php");
-        
-						break;
-
-						case "employee":
-						$_SESSION["employee_login"]=$email;
-						$loginMsg="Employee... Successfully Login....";
-            echo '<script type="text/javascript">
-            swal("", "Successfully Login to Employee", "success");
-            </script>';
-						header("refresh:1;employee/employee_home.php");
-						break;
-
-						case "user":
-						$_SESSION["user_login"]=$email;
-						$loginMsg="User... Successfully Login....";
-            echo '<script type="text/javascript">
-            swal("", "Successfully Login to Client", "success");
-            </script>';
-						header("refresh:1;user/user_home.php");
-						break;
-						
-						default:
-							$errorMsg[]="Wrong Email or Password or Role";	
-					}
-				}
-			else
-			{
-				$errorMsg[]="Wrong Email or Password or Role";
-			}
-	}
-	else
-	{
-		$errorMsg[]="Wrong Email or Password or Role";
-	}
-   }
-   else
-   {
-   	$errorMsg[]="Wrong Email or Password or Role";
-   }	
-}
-	catch(PDOException $e)
-	{
-		$e->getMessage();
-	}
-}
-else
-{
-	$errorMsg[]="Wrong Email or Password or Role";
-}
-   }
-?>
-
-
-
-
 
 <!-- Modal -->
 
@@ -226,15 +107,15 @@ else
           
           
             <div class="radio-wrapper">
-            	<form method="post">
+            	<form action="./includes/dbprocess.php" method="POST">
               <div class="container-rbn">
 
                	
-  					<input type="radio" class="radio__input" value="user" name="txt_role" id="radio1">
+  					<input type="radio" class="radio__input" value="User" name="myradio" id="radio1">
                     <label class="radio__label " for="radio1">CLIENT</label>
-                    <input class="radio__input" value="employee" type="radio" name="txt_role" id="radio2">
+                    <input class="radio__input" value="Employee" type="radio" name="myradio" id="radio2">
                     <label class="radio__label " for="radio2">AGENT</label>
-                    <input class="radio__input" value="admin" type="radio" name="txt_role" id="radio3">
+                    <input class="radio__input" value="Admin" type="radio" name="myradio" id="radio3">
                     <label class="radio__label " for="radio3">ADMIN</label>
      
                
@@ -242,12 +123,12 @@ else
            
 
             <div class="input-group">
-                <input type="text" class="input-field"  name="txt_email" placeholder="EMAIL"
+                <input type="text" class="input-field"  name="employeeid" placeholder="EMAIL"
                 required>
-                <input type="password" class="input-field" name="txt_password" placeholder="PASSWORD"
+                <input type="password" class="input-field" name="password" placeholder="PASSWORD"
                 required>
                 <span>Don't have account ? <a href="register.php" >Sign up here</a></span>
-                <button type="submit" name="btn_login" class="submit-btn" style="color:white">SIGN IN</button>
+                <button type="submit" name="login" class="submit-btn" style="color:white">SIGN IN</button>
                  
 
             </form>
