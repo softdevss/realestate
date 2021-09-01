@@ -31,7 +31,7 @@
     
     <link rel="shortcut icon" type="image/png " href="../img/fmsURST.png">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-       <link rel="stylesheet" href="./menu.css">
+    <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
    
    <title>RCY Real Homes</title>
@@ -198,12 +198,12 @@
             </nav>
         </div>
 
-        </body>
+     
 
         <script src="./menu.js"></script>
-        </html>
+       
 
-<body>
+
      
 
 
@@ -797,7 +797,7 @@ $(document).ready(function () {
 
 
         </main>
-    <!---- add user---> 
+    
             <div class="modal-bg">
                 <div class="modal">              
                     <div class="heading">
@@ -846,8 +846,8 @@ $(document).ready(function () {
                     <div class="input-data">
                         <select name="UserType" required>
                             <option value="" disabled selected>USER TYPE</option>
-                            <option value="Dean">DEAN</option>
-                            <option value="Professor">PROFESSOR</option> </select>
+                            <option value="Employee">Employee</option>
+                            <option value="User">User</option> </select>
                 </div>
                
                     </div>
@@ -926,6 +926,26 @@ $(document).ready(function () {
 -->
 
 </body>
+<script type="text/javascript">
+    
+var modalButton = document.querySelector('.modal-btn');
+var modal = document.querySelector('.modal-bg');
+var modalClose = document.querySelector('.close')
+
+modalButton.addEventListener('click' , function(){
+    modal.classList.add('bg-active');
+});
+
+modalClose.addEventListener('click', function (){
+    modal.classList.remove('bg-active');
+})
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.classList.remove('bg-active');
+  }
+}
+
+</script>
 
 
 </html>

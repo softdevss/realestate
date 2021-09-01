@@ -5,7 +5,6 @@
     if(isset($_SESSION['nameHolder'])){
         if($_SESSION['usertypeHolder'] == 'Employee'){
             header("Location: ../employee/employee_home.php");
-
         }
         else if($_SESSION['usertypeHolder'] == 'User'){
             header("Location: ../user/user_home.php");

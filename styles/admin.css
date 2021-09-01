@@ -481,12 +481,13 @@ main {
   padding: 10px 12px;
   text-align: center;
   font-size: .8rem;
+  color: black !important;
 }
 
 .table tbody tr:nth-child(even) {
   background-color: #e2e2e2;
   font-weight: 500;
-  color: #0e153a;
+  
 }
 
 .table tbody tr:last-child {
