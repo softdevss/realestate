@@ -4,96 +4,78 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title>Admin Home</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="../assets/css/main-design.css" type="text/css" media="all" />
 </head>
 <body>
-<div id="header">
-	<div class="shell">
-		
-		<?php
-			
-		?>
-		</div>
-	</div>
-</div>
-
-<div id="container">
-	<div class="shell">
-		
-		<div class="small-nav">
-			<a href="employee_home.php">Dashboard</a>
-			<span>&gt;</span>
-			Add New Property
-		</div>
-		
-		<br />
-		
-		<div id="main">
-			<div class="cl">&nbsp;</div>
-			
-			<div id="content">
+			<form action="add_house.php" method="post" enctype="multipart/form-data">
+					<section class="large-container">
 				
-				<div class="box">
-					<div class="box-head">
-						<h2>Add New Property</h2>
-					</div>
-					
-					<form action="add_house.php" method="post" enctype="multipart/form-data">
 						
-						<div class="form">
+						<div class="form-container-1 form-con">
   						
-								<p>
-									
-									<label>Property Type <span>(Required Field)</span></label>
+							
+								<div class="input-container">
+									<label>Property Type</label>
 									<input type="text" class="field size1" name="House_type" required="required" />
-								</p>
+								</div>	
 								
-								<p>
-									<span class="req">Property Image</span>
-									<label>Property Image <span>(Required Field)</span></label>
-									<input type="file" class="field size1" name="image" required="required" />
-								</p>
-								<p>
-									
+								<div class="input-container">
 									<label>Property Price <span>(Required Field)</span></label>
 									<input type="text" class="field size1" name="hire_cost" required="required" />
-								</p>
-								<p>
-									
+								</div>	
+
+								<div class="input-container">
 									<label>Property Location <span>(Required Field)</span></label>
 									<input type="text" class="field size1" name="location" required="required" />
-								</p>
-								<p>
-									
+								</div>
+
+								<div class="input-container">
+									<label>Property Image</label>
+									<input type="file" class="field size1" name="image" required="required" />
+								</div>
+								
+						</div>
+
+
+						<div class="form-container-2 form-con">	
+
+								<div class="input-container">
 									<label>Location Description <span>(Required Field)</span></label>
-									<input type="text" class="field size1" name="desc" required="required" />
-								</p>
-								<p>
-									
-									<label>Property Capacity<span>(Required Field)</span></label>
-									<input type="text" class="field size1" name="capacity"required="required" />
-								</p>
-								<p>
-									
-									<label>agent Name <span>(Required Field)</span></label>
-									<input type="text" class="field size1" name="name" required="required" />
-								</p>	
-								<p>
-									
-									<label>agent Contact <span>(Required Field)</span></label>
-									<input type="text" class="field size1" name="contact" required="required" />
-								</p>	
+									<input type="text" class="field size1" name="desc" required="required"/>
+								</div>
 							
-						</div>
-						
-						<div class="buttons">
+								<div class="input-container">
+									<label>Property Capacity</label>
+									<input type="text" class="field size1" name="capacity"required="required"/>
+								</div>		
+								
+								<div class="input-container">
+									<label>agent Name </label>
+									<input type="text" class="field size1" name="name" required="required"/>
+								</div>	
 							
-							<input type="submit" class="button" value="submit" name="send" />
-						</div>
+								<div class="input-container">	
+									<label>agent Contact </label>
+									<input type="text" class="field size1" name="contact" required="required"/>
+								</div>	
+						</div>	
 						
-					</form>
+						
+						
+					
+			</section>
+			<div class="cta">
+							
+					<input type="submit" class="sumit-btn" value="submit" name="send" />
+			</div>
+
+			</form>
+			
 					<?php
 							if(isset($_POST['send'])){
 								
@@ -134,9 +116,9 @@
 								}
 							}
 						?>
-				</div>
+			
 
-			</div>
+		
 			
 			<div id="sidebar">
 				
@@ -164,22 +146,12 @@
 					<br>
 					<br>
 					<a href="manage_property.php"><button>MANAGE HOME PAGE PROPERTIES</button></a>
-				</div>
-			</div>
-			
-			<div class="cl">&nbsp;</div>			
-		</div>
-	</div>
-</div>
+				
+		
+		
+	
 
-<div id="footer">
-	<div class="shell">
-		<span class="left">&copy; <?php echo date("Y");?> Mount Kenya Real Estate Management</span>
-		<span class="right">
-			Designed by Blair</a>
-		</span>
-	</div>
-</div>
+
 	
 </body>
 </html>
