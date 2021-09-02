@@ -77,13 +77,7 @@
     <body>
 
 
-<center>
 
-    <h3>
-
-    </h3>
-   
-</center>
 
     <header class="header">
             <div class="header__container">
