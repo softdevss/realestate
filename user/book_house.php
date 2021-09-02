@@ -2,8 +2,9 @@
 
 include_once 'includes/header.php';
 
-?>
+					
 
+?>
 
 
 <!DOCTYPE html>
@@ -41,37 +42,38 @@ include_once 'includes/header.php';
 		<div class="wrapper">
 			<ul class="properties_list">
 			<?php
-						include_once '../includes/dbprocess.php';
-						
-								
-						$sel = "SELECT * FROM houses WHERE house_id = '$_GET[id]'";
-						$rs = $conn->query($sel);
-						$rws = $rs->fetch_assoc();
-					    $house_id = $rws['house_id'];
-					    $status = $rws['status'];
-					    $name = $rws['name'];
-					    $contact = $rws['contact'];
-							
-			?>
+					
+					include_once '../includes/dbprocess.php';
+
+
+			
+					$select = "SELECT * FROM houses WHERE status ='available'";
+					$result = $conn->query($select);
+					while($row = $result->fetch_assoc()){
+				?>
 				<li>
 					<a href="">
-						<img class="thumb" src="../house_images/<?php echo $rws['image'];?>" width="300" height="200">
-					</a>
-					<span class="price"><?php echo ''.$rws['rent_cost'];?></span>
-					<div class="property_details">
+					<img class="thumb" src="../house_images/<?php echo $row['image'];?>" width="200" height="200"></a>
+					<span class="price"><?php echo ''.$row['rent_cost'];?></span>
+				<div class="property_details">
 						<h1>
-							<a href="book_house.php?id=<?php echo $rws['house_id'] ?>"><?php echo 'Property Type: '.$rws['house_type'];?></a>
+							<a href="book_house.php?id=<?php echo $row['house_id'] ?>"><?php echo 'Property Type: '.$row['house_type'];?></a>
 						</h1
-						<h2>Location: <span class="property_size"><?php echo $rws['location'];?></span></h2>
-						<h3><font color="blue">Property Number: </font><span class="property_size"><?php echo $rws['house_id'];?></span></h3>
-						<h3><font color="blue">Status: </font><span class="property_size"><?php echo $rws['status'];?></span></h3>
-						<h3><font color="blue">agent Name: </font><span class="property_size"><?php echo $rws['name'];?></span></h3>
-						<h3><font color="blue">agent Contact: </font><span class="property_size"><?php echo $rws['contact'];?></span></h3>
-						<h3><a href="bookreq.php?id=<?php echo $rws['house_id']?>"><font color="green">BOOK</font></a></h3>
+						<h2>Location: <span class="property_size"><?php echo $row['location'];?></span></h2>
+						<h3><font color="blue">Property Number: </font><span class="property_size"><?php echo $row['house_id'];?></span></h3>
+						<h3><font color="blue">Status: </font><span class="property_size"><?php echo $row['status'];?></span></h3>
+						<h3><font color="blue">agent Name: </font><span class="property_size"><?php echo $row['name'];?></span></h3>
+						<h3><font color="blue">agent Contact: </font><span class="property_size"><?php echo $row['contact'];?></span></h3>
+						<h3><a href="bookreq.php?id=<?php echo $row['house_id']?>"><font color="green">BOOK</font></a></h3>
 					</div>
 					
 				</li>
-											
+					 
+				<h2>Location Descriptions: <span class="property_size"> </span></h2>
+				<?php echo $row['location_description'];?>
+			<?php } ?>
+
+								
 								
 <br>
 <div id= "contacts">
@@ -84,12 +86,11 @@ include_once 'includes/header.php';
   <br>
 
 
-	</div>
-			</ul>
-			<h2>Location Descriptions: <span class="property_size"> </span></h2>
-<?php echo $rws['location_description'];?>
+				</div>
+			</ul>	
 		</div>
 		
+	
 		
 	</section>	<!--  end listing section  -->
 

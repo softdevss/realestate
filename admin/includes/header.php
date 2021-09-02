@@ -25,14 +25,21 @@
     <meta name="description" content="">
     <link rel="stylesheet" href="./menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="./admin-design.css">
-    
+
+  
     <title>RCY Real Homes</title>
     </head>
 
     <body>
 
 
+<center>
+
+	<h3>
+
+    </h3>
+   
+</center>
 
     <header class="header">
             <div class="header__container">
@@ -82,7 +89,7 @@
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
+                                    <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
                                         <a href="./house_management.php" class="nav__dropdown-item">MANAGE</a>
                                     </div>
                                 </div>
@@ -152,50 +159,14 @@
             </nav>
         </div>
 
-        <main>
-
-        <div class="main-content">
-                <div class="info-card">
-                    <div class="card">
-                   <div class="card-icon">
-                       <span><i class="fas fa-layer-group"></i></span>
-                   </div> 
-                   <div class="card-details">
-                       <h4>CLIENTS</h4>
-                       <h2>669</h2>
-                   </div>
-                   <p>Total clients </p> 
-                </div>
-                <div class="card">
-                   <div class="card-icon">
-                       <span><i class="fas fa-layer-group"></i></span>
-                   </div> 
-                   <div class="card-details">
-                       <h4>CLIENTS</h4>
-                       <h2>669</h2>
-                   </div>
-                   <p>Total clients </p> 
-                </div>
-                <div class="card">
-                   <div class="card-icon">
-                       <span><i class="fas fa-layer-group"></i></span>
-                   </div> 
-                   <div class="card-details">
-                       <h4>CLIENTS</h4>
-                       <h2>669</h2>
-                   </div>
-                   <p>Total clients </p> 
-                </div>
-            </div>
-        </div>
-
-    
-
-
-
-        </main>
-
 		</body>
-        <script src="https://kit.fontawesome.com/a076d05399.js"></script> 
-        <script src="./menu.js"></script>
+        <?php 
+
+include_once 'includes/footer.php';
+
+?>
         </html>
+
+
+
+

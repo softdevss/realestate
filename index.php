@@ -517,29 +517,34 @@
           <span class="circle one"></span>
           <span class="circle two"></span>
 <!-- insert contact us -->
-        <?php
+      <?php
+      if(isset($_POST['submit'])){ 
+      $server = "localhost";
+      $username = "root";
+      $password = "";
+      $dbname = "php_multiplelogin";
 
-if(isset($_POST['submit'])){
-    
-  $fullname = $_POST['name'];
-  $email = $_POST['email'];
-  $phone = $_POST['phone'];      
-  $message = $_POST['message'];
-    
-    
-//    move_uploaded_file($post_image_temp, "../images/$post_image" );
-    
-$query = "INSERT INTO contactus (fullname, email, phone, message) ";
-$query .= "VALUES('{$fullname}','{$email}','{$phone}','{$message}') ";
+      $fullname = $_POST['name'];
+      $email = $_POST['email'];
+      $phone = $_POST['phone'];
+      $message = $_POST['message'];
 
-    $create_user_query = mysqli_query($connection, $query);
-    
-    echo "User Created: " . " " . "<a href='users.php'>View Users</a> ";
-    
-}
-
-?>
-
+      $conn = mysqli_connect($server, $username, $password, $dbname);
+      
+      $query = "INSERT INTO `contactus`(`fullname`, `email`, `phone`, `message`) VALUES ('$fullname','$email','$phone','$message')";
+      
+      $result = mysqli_query($conn,$query);
+      if($result){
+       // echo 'Message Sent';
+      }
+      else{
+        echo 'Message not Sent';
+      }
+     
+      mysqli_close($conn);
+        
+      }
+      ?>
           <form action="index.php" method="POST" autocomplete="off">
             <h3 class="title">Contact us</h3>
             <div class="input-container">
