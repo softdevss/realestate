@@ -1,7 +1,9 @@
 <?php
-	 include '../../connection.php';
+	
+	include_once '../../includes/dbprocess.php';
+
 	$house_id = $_REQUEST['id'];
-	$query = mysqli_query($connection,"UPDATE houses SET status='Available' WHERE house_id = '$house_id'");
+	$query = mysqli_query($conn,"UPDATE houses SET status='Available' WHERE house_id = '$house_id'");
   
 	if($query){
 	  ?>

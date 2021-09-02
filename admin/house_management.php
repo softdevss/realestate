@@ -1,5 +1,6 @@
 <?php
-	include '../connection.php';
+	    include_once '../includes/dbprocess.php';
+
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -87,7 +88,7 @@
 							</tr>
 							<?php
 								$select = "SELECT * FROM houses";
-								$result = $connection->query($select);
+								$result = $conn->query($select);
 								while($row = $result->fetch_assoc()){
 							?>
 							<tr>

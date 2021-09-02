@@ -1,9 +1,11 @@
 <?php
-	include '../../connection.php';
+	
+	include_once '../../includes/dbprocess.php';
+
 	if(isset($_GET['id']))
 	{
 	$id = $_GET['id'];
-	$select = mysqli_query($connection,"SELECT * FROM houses WHERE house_id = '$id'") or die(mysqli_error($connection));
+	$select = mysqli_query($conn,"SELECT * FROM houses WHERE house_id = '$id'") or die(mysqli_error($conn));
 	$selresult = mysqli_fetch_array($select);
 	}
 ?>

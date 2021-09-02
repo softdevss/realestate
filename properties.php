@@ -71,9 +71,9 @@
 
 	<div class="grid">
 	<?php
-						require_once 'connection.php';
+						include_once './includes/dbprocess.php';
 						$sel = "SELECT * FROM houses";
-						$rs = $connection->query($sel);
+						$rs = $conn->query($sel);
 						while($rws = $rs->fetch_assoc()){
 							
 			?>

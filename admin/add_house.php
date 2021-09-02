@@ -1,5 +1,6 @@
 <?php
-	include '../connection.php';
+	    include_once '../includes/dbprocess.php';
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -117,7 +118,7 @@
 								
 								$qr = "INSERT INTO houses (house_type,image,rent_cost,location,location_description,max_capacity,name, contact,status) 
 													VALUES ('$house_type','$image','$rent_cost','$location','$location_description','$max_capacity','$name','$contact','Added')";
-								$res =mysqli_query($connection,$qr) or die(mysqli_error($connection));
+								$res =mysqli_query($conn,$qr) or die(mysqli_error($conn));
 								if($res>0){
 									echo "<script type = \"text/javascript\">
 											alert(\"Property added successfully\");
