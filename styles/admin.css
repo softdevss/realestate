@@ -11,127 +11,6 @@
 }
 
 
-
-/* DITO NA UNG TABLE */
-.table {
-  max-width: 100%;
-  width: 100%;
-  border-collapse: collapse;
-  font-size: .7rem;
-  border-radius: 7px 7px 0 0;
-  overflow: hidden;
-  -webkit-box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
-  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.15);
-}
-
-.table th {
-  background-color: #dddddd;
-  color: #555555;
-}
-
-.table thead tr {
-  font-weight: normal;
-}
-
-.table td, .table th {
-  padding: 10px 12px;
-  text-align: center;
-  font-size: .8rem;
-  color:#020202 !important;
-}
-
-.table tbody tr:nth-child(even) {
-  background-color: #e2e2e2;
-  font-weight: 500;
-  color: #0e153a;
-}
-
-.table tbody tr:last-child {
-  border-bottom: 2px solid #3d6cb9;
-}
-
-.table tbody tr {
-  border-bottom: 1px solid rgba(187, 186, 186, 0.867);
-  cursor: pointer;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
-}
-
-.table tbody tr:hover {
-  background: #eeeeee;
-  -webkit-box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
-}
-
-.table th select {
-  font-weight: 600;
-  background: #dddddd;
-  color: #555555;
-  outline: none;
-  border: none;
-  border-radius: 23px;
-}
-
-.table td button {
-  border: none;
-  background: transparent;
-}
-
-.table td i {
-  padding: 5px;
-  font-size: 1.2rem;
-}
-
-.table td button {
-  outline: none;
-}
-
-#trash {
-  color: #8a0202;
-  cursor: pointer;
-}
-
-#trash:hover {
-  color: red;
-}
-
-#edit {
-  color: #5eaa54;
-  cursor: pointer;
-}
-
-#edit:hover {
-  color: #3bf04a;
-}
-
-#edit-off {
-  color: #444444;
-  cursor: pointer;
-}
-
-#edit-off:hover {
-  color: #696969;
-}
-
-#resetp {
-  color: #3d3d3d;
-  cursor: pointer;
-}
-
-#resetp:hover {
-  color: #5a5a5a;
-}
-
-#download {
-  color: #0084ff;
-  cursor: pointer;
-  font-size: 1.2rem;
-}
-
-#dowload:hover {
-  color: #001a63;
-}
-
 /*responsive table*/
 @media (max-width: 768px) {
   .table thead {
@@ -1023,7 +902,7 @@ option {
     height: 100%;
     width: 100%;
     left: 0;
-    background: #4158d0;
+    
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
     -webkit-transform-origin: right;
@@ -1146,6 +1025,7 @@ option {
         -ms-flex-align: center;
             align-items: center;
     padding: 1rem;
+    color: #000;
   }
   
   .heading h3 {

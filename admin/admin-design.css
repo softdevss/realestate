@@ -3,9 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+
 .main-content{
-    width: 100%;
-    max-width: 100%;
+  
     margin-left: 275px;
     margin: 10px;
     padding: 10px;
