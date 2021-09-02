@@ -1,3 +1,11 @@
+<?php 
+
+include_once 'includes/header.php';
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +41,11 @@
 		<div class="wrapper">
 			<ul class="properties_list">
 			<?php
-						include '../connection.php';
+						include_once '../includes/dbprocess.php';
+						
+								
 						$sel = "SELECT * FROM houses WHERE house_id = '$_GET[id]'";
-						$rs = $connection->query($sel);
+						$rs = $conn->query($sel);
 						$rws = $rs->fetch_assoc();
 					    $house_id = $rws['house_id'];
 					    $status = $rws['status'];
