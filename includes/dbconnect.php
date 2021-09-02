@@ -3,7 +3,7 @@
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbDatabasename = "rcy";
+$dbDatabasename = "php_multiplelogin";
 
 $conn = new mysqli($dbServername, $dbUsername, $dbPassword, $dbDatabasename); 
 

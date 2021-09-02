@@ -43,7 +43,13 @@ include_once 'includes/header.php';
 								</div>
 								
 						</div>
-
+						<?php
+                            $query = "SELECT Fullname FROM tblaccounts a  WHERE  a.Fullname = '$nameHolder'";    
+                            $stmt = $conn->prepare($query);
+                            $stmt->execute();
+                            $result = $stmt->get_result();
+                            $row = $result->fetch_assoc();
+							?>
 
 						<div class="form-container-2 form-con">	
 
@@ -56,14 +62,12 @@ include_once 'includes/header.php';
 									<label>Property Capacity</label>
 									<input type="text" class="field size1" name="capacity"required="required"/>
 								</div>		
-								
 								<div class="input-container">
-									<label>agent Name </label>
-									<input type="text" class="field size1" name="name" required="required"/>
-								</div>	
-							
-								<div class="input-container">	
-									<label>agent Contact </label>
+									<label>Agent Name</label>
+									<input type="text" class="field size1" name="name"required="required"/>
+								</div>		
+    						<div class="input-container">	
+									<label>Agent Contact </label>
 									<input type="text" class="field size1" name="contact" required="required"/>
 								</div>	
 						</div>	

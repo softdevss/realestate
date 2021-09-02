@@ -33,7 +33,8 @@ include_once 'includes/header.php';
 		</div>
 		
 		<br />
-		
+
+	
 		<div id="main">
 			<div class="cl">&nbsp;</div>
 			
@@ -51,7 +52,6 @@ include_once 'includes/header.php';
 								<font color="purple">
 								<th><font color="purple">Property id</font></th>
 								<th><font color="purple">Property type</font></th>
-								
 								<th><font color="purple">Cost</font></th>
 								<th><font color="purple">Property Location</font></th>
 								<th><font color="purple">Location Description</font></th>

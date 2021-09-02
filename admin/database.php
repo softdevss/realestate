@@ -62,9 +62,10 @@
 
 
 
+   
     <header class="header">
             <div class="header__container">
-               
+             
                
                 <?php $nameHolder = $_SESSION['nameHolder']; ?>
                 <a href="#" class="header__logo"> <?php echo $nameHolder ?></a>
