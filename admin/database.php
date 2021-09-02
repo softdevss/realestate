@@ -38,23 +38,6 @@
 </head>
 
 <style>
-.user-naming {
-  display: block;
-  text-align: center;
-  padding: 2rem;
-  color: #fff;
-}
-
-.user-naming h5 {
-  font-weight: normal;
-  font-size: 1.4rem;
-}
-
-.user-naming i {
-  font-size: 4rem;
-  color: #fff;
-}
-
 
 .activestat {
   background: green;
@@ -77,17 +60,12 @@
     <body>
 
 
-<center>
 
-    <h3>
 
-    </h3>
    
-</center>
-
     <header class="header">
             <div class="header__container">
-               
+             
                
                 <?php $nameHolder = $_SESSION['nameHolder']; ?>
                 <a href="#" class="header__logo"> <?php echo $nameHolder ?></a>
