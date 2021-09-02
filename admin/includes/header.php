@@ -89,7 +89,7 @@
 
                                 <div class="nav__dropdown-collapse">
                                     <div class="nav__dropdown-content">
-                                        <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
+                                    <a href="./add_house.php" class="nav__dropdown-item">ADD PROPERTIES</a>
                                         <a href="./house_management.php" class="nav__dropdown-item">MANAGE</a>
                                     </div>
                                 </div>
