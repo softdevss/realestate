@@ -1,5 +1,7 @@
-<?php
-	    include_once '../includes/dbprocess.php';
+<?php 
+
+include_once 'includes/header.php';
+
 
 ?>
 

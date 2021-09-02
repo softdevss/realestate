@@ -93,7 +93,7 @@
 						
 
 <?php
-                        include '../../connection.php';
+                        include_once '../../includes/dbprocess.php';
                         $house_id = $_GET['id'];
 							if(isset($_POST['send'])){
 
@@ -106,7 +106,7 @@
 								
 								
 								$qr = "UPDATE houses SET house_type='$house_type', rent_cost='$rent_cost',location='$location' , location_description='$location_description', max_capacity='$max_capacity' WHERE house_id = '$house_id'";
-								$res =mysqli_query($connection,$qr) or die(mysqli_error($connection));
+								$res =mysqli_query($conn,$qr) or die(mysqli_error($conn));
 								if($res){
 									echo "<script type = \"text/javascript\">
 											alert(\"Property Updated successfully\");

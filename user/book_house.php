@@ -42,9 +42,7 @@ include_once 'includes/header.php';
 			<ul class="properties_list">
 			<?php
 						include_once '../includes/dbprocess.php';
-						
-								
-						$sel = "SELECT * FROM houses WHERE house_id = '$_GET[id]'";
+						$sel= "SELECT * FROM houses WHERE house_id = '$_GET[id]'";
 						$rs = $conn->query($sel);
 						$rws = $rs->fetch_assoc();
 					    $house_id = $rws['house_id'];
