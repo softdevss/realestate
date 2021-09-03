@@ -1,7 +1,4 @@
-
-            
-                    
-                    
+ 
                     <div class="nav" id="navbar">
                     <nav class="nav__container">
                         <div>
@@ -43,8 +40,8 @@
         
                                         <div class="nav__dropdown-collapse">
                                             <div class="nav__dropdown-content">
-                                                <a href="voucher.php" class="nav__dropdown-item">View Voucher</a>
-                                                <a href="#" class="nav__dropdown-item">Add Voucher</a>
+                                                <a href="view_voucher.php" class="nav__dropdown-item">View Voucher</a>
+                                                <a href="add_voucher.php" class="nav__dropdown-item">Add Voucher</a>
                                             
                                             </div>
                                         </div>

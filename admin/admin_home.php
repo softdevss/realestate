@@ -46,7 +46,7 @@
                 google.charts.setOnLoadCallback(drawChart);
                 function drawChart() {
                 var data = google.visualization.arrayToDataTable([
-                ["Element", "Density", { role: "style" } ],
+                ["Element", "Sales", { role: "style" } ],
                 ["January", 5, "#f5587b"],
                 ["February", 20.49, "#f5587b"],
                 ["March", 19.30, "#f5587b"],

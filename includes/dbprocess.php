@@ -193,10 +193,8 @@ if(isset($_POST['activate_btn_confirm'])){
             mysqli_stmt_bind_param($stmt,"s",$EmpID);
             mysqli_stmt_execute($stmt);
         }
-
     }
 
-    
     if(isset($_POST['deletefiles_btn_confirm'])){
 		$ID=$_POST['deletefiles_id_confirm'];
 
@@ -910,18 +908,6 @@ if(isset($_POST['uploadprof'])){
         $_SESSION ['response'] = "Successfully Uploaded your File!";
         $_SESSION ['res_type']= "success";
     }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }
