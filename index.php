@@ -531,7 +531,7 @@
 
       $conn = mysqli_connect($server, $username, $password, $dbname);
       
-      $query = "INSERT INTO `contactus`(`fullname`, `email`, `phone`, `message`) VALUES ('$fullname','$email','$phone','$message')";
+      $query = "INSERT INTO `tblcontact`(`fullname`, `email`, `phone`, `message`) VALUES ('$fullname','$email','$phone','$message')";
       
       $result = mysqli_query($conn,$query);
       if($result){
