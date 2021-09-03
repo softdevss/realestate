@@ -99,14 +99,13 @@ $(document).ready(function () {
 
 <?php
 
-if(isset($_POST['delete_btn_confirm'])){
-
+if(isset($_POST['delete_btn_confirmd'])){
     $voucher_id = $_POST['delete_id_confirm'];
 
-    $sqlforVoucher="DELETE FROM voucher WHERE voucher_id=?";
+    $sqlforVoucher = "DELETE FROM voucher WHERE voucher_id = ?";
+  
 
     $stmt = mysqli_stmt_init($conn);
-
 
     if(!mysqli_stmt_prepare($stmt, $sqlforVoucher)){
         echo "QUERY FAILED" . mysqli_error($conn);
@@ -114,8 +113,8 @@ if(isset($_POST['delete_btn_confirm'])){
         mysqli_stmt_bind_param($stmt,"s",$voucher_id);
         mysqli_stmt_execute($stmt);
     }
-
 }
+
 ?>
 
 
