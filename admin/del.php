@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "php_multiplelogin";
+$dbname = "rcy";
 
 $id = $_GET['a'];
 

@@ -1,7 +1,7 @@
 <?php 
 
 include_once 'includes/header.php';
-
+include_once 'includes/navbar.php';
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -12,36 +12,8 @@ include_once 'includes/header.php';
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 </head>
 <body>
-<div id="header">
-	<div class="shell">
-		
-		<?php
-			
-		?>
-		</div>
-	</div>
-</div>
 
-<div id="container">
-	<div class="shell">
 		
-		<div class="small-nav">
-			<a href="admin_home.php">Dashboard</a>
-			<span>&gt;</span>
-			Add New Property
-		</div>
-		
-		<br />
-		
-		<div id="main">
-			<div class="cl">&nbsp;</div>
-			
-			<div id="content">
-				
-				<div class="box">
-					<div class="box-head">
-						<h2>Add New Property</h2>
-					</div>
 					
 					<form action="add_house.php" method="post" enctype="multipart/form-data">
 						
@@ -139,50 +111,16 @@ include_once 'includes/header.php';
 						?>
 				</div>
 
-			</div>
 			
-			<div id="sidebar">
+		
 				
-				<div class="box">
-					
-					<div class="box-head">
-						<h2>Management</h2>
-					</div>
 					
 					<div class="box-content">
 						<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>
-						<div class="cl">&nbsp;</div>
-
-						
-						
-						
-						<!-- Sort -->
-						
-						
-					</div>
-					<br>
-					<br>
-					<a href="add_property.php"><button>ADD PROPERTY TO HOME PAGE</button></a>
-					<br>
-					<br>
-					<br>
-					<a href="manage_property.php"><button>MANAGE HOME PAGE PROPERTIES</button></a>
+						<a href="manage_property.php"><button>MANAGE HOME PAGE PROPERTIES</button></a>
 				</div>
-			</div>
 			
-			<div class="cl">&nbsp;</div>			
-		</div>
-	</div>
-</div>
 
-<div id="footer">
-	<div class="shell">
-		<span class="left">&copy; <?php echo date("Y");?> Mount Kenya Real Estate Management</span>
-		<span class="right">
-			Designed by Blair</a>
-		</span>
-	</div>
-</div>
 	
 </body>
 </html>
