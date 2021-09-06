@@ -35,6 +35,9 @@ include_once 'includes/navbar.php';
 </head>
 <body>
 
+<div class="page-title">
+	<h3>Add new properties</h3>
+</div>
 
 
 
@@ -42,7 +45,7 @@ include_once 'includes/navbar.php';
 					<table class="table users">
 					
 						<thead>
-								<th><input type="checkbox" class="checkbox"></th>
+								<th></th>
 								<th>Property id</th>
 								<th>Property type</th>
 								
@@ -78,7 +81,7 @@ include_once 'includes/navbar.php';
 								<td><img class="thumb" src="../house_images/<?php echo $row['image'];?>" width="200" height="200"></td>
 								<td><h3><?php echo $row['name'] ?></h3></td>
 								<td><h3><?php echo $row['contact'] ?></h3></td>
-								<td><a href="javascript:sureToApprove(<?php echo $row['house_id'];?>)" class=""><font color="purple">Accept</font></a>&nbsp;&nbsp;<a href="javascript:sureToDelete(<?php echo $row['house_id'];?>)" class="ico del"><font color="red">Delete</font></a><a href="javascript:sureToEdit(<?php echo $row['house_id'];?>)" class="ico edit">Edit</a></td>
+								<td><a href="javascript:sureToApprove(<?php echo $row['house_id'];?>)" class=""><font color="purple">Accept</font></a>&nbsp;&nbsp;<a href="javascript:sureToDelete(<?php echo $row['house_id'];?>)" class="ico del"><font color="red">Delete</font></a><a href="javascript:sureToEdit(<?php echo $row['house_id'];?>)" class="ico edit"> Edit</a></td>
 							</tr>
 							<?php
 								}
@@ -86,8 +89,7 @@ include_once 'includes/navbar.php';
 						</table>
 				
 				
-					<h2><a href="house_print.php">View Report</h2>
-				
+					
 				<!-- End Box -->
 
 		

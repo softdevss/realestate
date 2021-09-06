@@ -13,7 +13,10 @@ include_once 'includes/navbar.php';
 </head>
 <body>
 
-		
+<div class="page-title">
+	<h3>Add new properties</h3>
+</div>
+
 					
 					<form action="add_house.php" method="post" enctype="multipart/form-data">
 						
@@ -63,11 +66,11 @@ include_once 'includes/navbar.php';
 							
 						</div>
 						
-						<div class="buttons">
-							
-							<input type="submit" class="button" value="submit" name="send" />
+						<div class="cta">
+					<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>			
+					
+					<input type="submit" class="sumit-btn" value="submit" name="send" />
 						</div>
-						
 					</form>
 					<?php
 							if(isset($_POST['send'])){
@@ -115,10 +118,7 @@ include_once 'includes/navbar.php';
 		
 				
 					
-					<div class="box-content">
-						<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>
-						<a href="manage_property.php"><button>MANAGE HOME PAGE PROPERTIES</button></a>
-				</div>
+			
 			
 
 	

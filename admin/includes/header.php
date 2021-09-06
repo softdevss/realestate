@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../styles/admin.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">
     <link rel="stylesheet" href="../boxicons/css/boxicons.css">
-  
+    <link rel="shortcut icon" type="image/png " href="../logo.jpg">
     <link href="./menu.css" rel="stylesheet">
     <link href="./admin-design.css" rel="stylesheet">
     <link href="././styles/admin.css" rel="stylesheet">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="../assets/css/main-design.css" rel="stylesheet">
 
-    <title>Document</title>
+    <title>RCY REAL HOMES</title>
     <style>
     a{
     text-decoration: none!important;
@@ -54,10 +54,10 @@
 
     <header class="header">
             <div class="header__container">
-                <img src="../assets/img/admin-jeremy.jpg" alt="" class="header__img">
+                <img src="../assets/img/admin-sakura.jpg" alt="ADMIN" class="header__img">
                
                 <?php $nameHolder = $_SESSION['nameHolder']; ?>
-                <a href="#" class="header__logo"> <?php echo $nameHolder ?></a>
+                <a href="../admin_home.php" class="header__logo"> <span>MRS.</span> <?php echo $nameHolder ?></a>
             
                 <h5></h5>
                

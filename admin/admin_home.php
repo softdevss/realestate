@@ -12,14 +12,14 @@
                        <span><i class="fas fa-layer-group"></i></span>
                    </div> 
                    <div class="card-details">
-                       <h4>CLIENTS</h4>
-                       <h2>669</h2>
+                       <h4>MONTHLY SALES</h4>
+                       <h2>P 1,230,000 </h2>
                    </div>
-                   <p>Total clients </p> 
+                   <p>Total sales </p> 
                 </div>
                 <div class="card">
                    <div class="card-icon">
-                       <span><i class="fas fa-layer-group"></i></span>
+                       <span><i class="fas fa-users"></i></span>
                    </div> 
                    <div class="card-details">
                        <h4>CLIENTS</h4>
@@ -29,13 +29,13 @@
                 </div>
                 <div class="card">
                    <div class="card-icon">
-                       <span><i class="fas fa-layer-group"></i></span>
+                       <span><i class="fas fa-user-secret"></i></span>
                    </div> 
                    <div class="card-details">
-                       <h4>CLIENTS</h4>
-                       <h2>669</h2>
+                       <h4>Agents</h4>
+                       <h2>69</h2>
                    </div>
-                   <p>Total clients </p> 
+                   <p>Total Agents </p> 
                 </div>
             </div>
 

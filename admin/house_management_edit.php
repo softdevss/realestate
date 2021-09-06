@@ -65,14 +65,15 @@ $selresult = mysqli_fetch_array($select);
 							
 						</div>
 						
-						<div class="buttons">
-							
-							<input type="submit" class="button" value="UPDATE" name="send" />
-						</div>
+						<div class="cta">
+					<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>			
+					
+					<input type="submit" value="UPDATE" name="send" />
+			</div>
 						
 
 <?php
-                        include_once '../../includes/dbprocess.php';
+                        include_once '../includes/dbprocess.php';
                         $house_id = $_GET['id'];
 							if(isset($_POST['send'])){
 
@@ -89,14 +90,14 @@ $selresult = mysqli_fetch_array($select);
 								if($res){
 									echo "<script type = \"text/javascript\">
 											alert(\"Property Updated successfully\");
-											window.location = (\"../house_management.php\")
+											window.location = (\"./house_management.php\")
 											</script>";
 									}
 								else 
 								{
 									echo "<script type = \"text/javascript\">
 											alert(\"Property not Updated. Try again.\");
-											window.location = (\"../house_management.php\")
+											window.location = (\"./house_management.php\")
 											</script>";
 								}
 							}
@@ -107,11 +108,7 @@ $selresult = mysqli_fetch_array($select);
 			
 		
 					
-					<div class="box-content">
-						<a href="../house_management.php" class="add-button"><span>View Available Properties</span></a>
-						<div class="cl">&nbsp;</div>
-						
-						
+				
 						
 					
 						

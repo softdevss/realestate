@@ -14,7 +14,14 @@ include_once 'includes/header.php';
 	<title>Admin Home</title>
 	<link rel="stylesheet" href="../assets/css/main-design.css" type="text/css" media="all" />
 </head>
+
 <body>
+
+<div class="page-title">
+	<h3>Add new properties</h3>
+</div>
+
+
 			<form action="add_house.php" method="post" enctype="multipart/form-data">
 					<section class="large-container">
 				
@@ -77,7 +84,8 @@ include_once 'includes/header.php';
 					
 			</section>
 			<div class="cta">
-							
+					<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>			
+					
 					<input type="submit" class="sumit-btn" value="submit" name="send" />
 			</div>
 
@@ -123,41 +131,8 @@ include_once 'includes/header.php';
 								}
 							}
 						?>
-			
-
-		
-			
-			<div id="sidebar">
+							
 				
-				<div class="box">
-					
-					<div class="box-head">
-						<h2>Management</h2>
-					</div>
-					
-					<div class="box-content">
-						<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>
-						<div class="cl">&nbsp;</div>
-
-						
-						
-						
-						<!-- Sort -->
-						
-						
-					</div>
-					<br>
-					<br>
-					<a href="add_property.php"><button>ADD PROPERTY TO HOME PAGE</button></a>
-					<br>
-					<br>
-					<br>
-					<a href="manage_property.php"><button>MANAGE HOME PAGE PROPERTIES</button></a>
-				
-		
-		
-	
-
 
 	
 </body>

@@ -200,6 +200,9 @@
                             $result = $stmt->get_result();
                             $row = $result->fetch_assoc();
                     ?>  
+                    <div class="admin-image">
+                        <img src="../assets/img/admin-sakura.jpg" alt="">
+                    </div>
 
                         <div class="heading-name">
                         <h2><?= $row['Fullname']; ?></h2>

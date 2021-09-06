@@ -1,4 +1,5 @@
 <?php include "includes/header.php"; ?>
+<?php include "includes/navbar.php"; ?>
 
 |<?php 
  include "../includes/dbconnect.php"; 
@@ -71,7 +72,7 @@ if(!$create_user_query){
 				</div>	
 	</section>
            
-            <?php include "includes/navbar.php"; ?>
+         
 
 </body>
 <script src="https://kit.fontawesome.com/a076d05399.js"></script> 

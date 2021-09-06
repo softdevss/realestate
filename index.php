@@ -522,7 +522,7 @@
       $server = "localhost";
       $username = "root";
       $password = "";
-      $dbname = "php_multiplelogin";
+      $dbname = "realestate";
 
       $fullname = $_POST['name'];
       $email = $_POST['email'];

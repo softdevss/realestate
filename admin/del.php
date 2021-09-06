@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "rcy";
+$dbname = "realestate";
 
 $id = $_GET['a'];
 

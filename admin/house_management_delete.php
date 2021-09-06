@@ -1,6 +1,6 @@
 <?php
 	
-	include_once '../../includes/dbprocess.php';
+	include_once '../includes/dbprocess.php';
 
 
 	$house_id = $_REQUEST['id'];
@@ -11,7 +11,7 @@
         
 		echo "<script type = \"text/javascript\">
 					alert(\"Property Successfully deleted\");
-					window.location = (\"../house_management.php\")
+					window.location = (\"./house_management.php\")
 				</script>";
 	}
 ?>

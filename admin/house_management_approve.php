@@ -1,6 +1,6 @@
 <?php
 	
-	include_once '../../includes/dbprocess.php';
+	include_once '../includes/dbprocess.php';
 
 	$house_id = $_REQUEST['id'];
 	$query = mysqli_query($conn,"UPDATE houses SET status='Available' WHERE house_id = '$house_id'");
@@ -9,11 +9,11 @@
 	  ?>
 	  <script>
 	  window.alert("Property Accepted");
-	  window.location.href="../house_management.php";	  
+	  window.location.href="./house_management.php";	  
 	  </script>
 		<?php
 	?>
-		<meta content="4; ../house_management.php" http-equiv="refresh" />
+		<meta content="4; ./house_management.php" http-equiv="refresh" />
 	<?php
 	}
 	else 

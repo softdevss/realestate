@@ -22,7 +22,7 @@
     margin: 10px 0;
 }
 .main-content .info-card .card{
-    width: 33%;
+    width: 49%;
    min-height: 250px;
    padding:20px ;
    background: linear-gradient(to left , #B57686, #9a4fe9);
@@ -102,9 +102,7 @@ font-size:1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    height:100px;
-    margin:0 0 3rem 0;
-
+    margin: 0 0 3rem 0;
 }
 .cta input{
     width: 200px;
