@@ -54,7 +54,7 @@
                                     </a>
                                 
         
-                                <a href="../contact.php" class="nav__link">
+                                <a href="./contact.php" class="nav__link">
                                         <i class='bx bx-message-rounded nav__icon' ></i>
                                         <span class="nav__name">CLIENTS INQUIRIES</span>
                                     </a>

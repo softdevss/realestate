@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Document</title>
 </head>
-
 <body>
-   
     <table class="table">
         <tr>
             <td>Id</td>
@@ -22,12 +20,12 @@
             <td>Email</td>
             <td>Phone</td>
             <td>Message</td>
-            <td>Delete</td>
         </tr>
         <?php
-               
+                $conn = mysqli_connect("localhost", "root", "", "php_multiplelogin");
                 $query="SELECT * FROM tblcontact";
                 $result= $conn->query($query);
+
                 if($result->num_rows>0){
                     while($row = $result->fetch_assoc()){
                         ?>
@@ -36,8 +34,8 @@
                             <td><?php echo $row['fullname'];?></td>
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['phone'];?></td>
-                            <td><?php echo $row['message'];?></td>							
-        
+                            <td><?php echo $row['message'];?></td>
+                            <td><a href="./del.php?a=<?php echo $row['id']; ?>">Delete</a></td>
                         </tr>
                         <?php
                     }
@@ -49,6 +47,6 @@
             ?>
         
     </table>
-   
+  
 </body>
 </html>

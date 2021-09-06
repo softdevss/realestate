@@ -35,6 +35,7 @@
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['phone'];?></td>
                             <td><?php echo $row['message'];?></td>
+                            <td><a href="./del.php?a=<?php echo $row['id']; ?>">Delete</a></td>
                         </tr>
                         <?php
                     }
@@ -46,5 +47,6 @@
             ?>
         
     </table>
+  
 </body>
 </html>
