@@ -1,7 +1,8 @@
 <?php
-    include '../includes/dbprocess.php';
-    include './includes/header.php';
-  
+    
+    include "./includes/header.php";
+    include "./includes/navbar.php";
+    include "../includes/dbprocess.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,7 +23,7 @@
             <td>Message</td>
         </tr>
         <?php
-                $conn = mysqli_connect("localhost", "root", "", "php_multiplelogin");
+               
                 $query="SELECT * FROM tblcontact";
                 $result= $conn->query($query);
 

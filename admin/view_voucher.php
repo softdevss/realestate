@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Document</title>
     
 <body>
@@ -64,7 +65,7 @@ $(document).ready(function () {
         var deleteid = data[0];
         
         swal({
-         title: "Are you sure to delete this account?",
+         title: "Are you sure to delete this voucher?",
          icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -81,16 +82,14 @@ $(document).ready(function () {
             },
          success: function(result){
             swal({
-                title: "Successfully Account Deleted!",
+                title: "Successfully Voucher Deleted!",
                 icon: "success",
             }).then((result) => {
                 location.reload();
             });
         }
         });
-
         } 
-
         });
      });
  });
@@ -102,9 +101,8 @@ $(document).ready(function () {
 if(isset($_POST['delete_btn_confirmd'])){
     $voucher_id = $_POST['delete_id_confirm'];
 
-    $sqlforVoucher = "DELETE FROM voucher WHERE voucher_id = ?";
+    $sqlforVoucher = "DELETE FROM `voucher` WHERE voucher_id =  ";
   
-
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sqlforVoucher)){
