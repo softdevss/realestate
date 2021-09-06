@@ -14,14 +14,18 @@
     <title>Document</title>
 </head>
 <body>
-<table class="table users">
-        <tr>
-            <td>Id</td>
-            <td>Fullname</td>
-            <td>Email</td>
-            <td>Phone</td>
-            <td>Message</td>
-        </tr>
+
+
+    <table class="table">
+        <thead>
+       
+            <th>Id</th>
+            <th>Fullname</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+            <th>action</th>
+         </thead>
         <?php
                
                 $query="SELECT * FROM tblcontact";

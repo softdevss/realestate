@@ -2,7 +2,7 @@
                     <div class="nav" id="navbar">
                     <nav class="nav__container">
                         <div>
-                            <a href="#" class="nav__link nav__logo">
+                            <a href="./admin_home.php" class="nav__link nav__logo">
                                 <i class='bx bxs-disc nav__icon' ></i>
                                 <span class="nav__logo-name">Administrator</span>
                             </a>

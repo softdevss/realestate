@@ -1,8 +1,10 @@
 
 <?php
+	include_once './includes/header.php';
+	include_once './includes/navbar.php';
+	
 
-include "includes/header.php";
-include "includes/navbar.php";
+
 
 if(isset($_GET['id'])){
 
@@ -21,36 +23,9 @@ $selresult = mysqli_fetch_array($select);
    
 </head>
 <body>
-<div id="header">
-	<div class="shell">
-		
-		<?php
-			
-		?>
-		</div>
-	</div>
-</div>
 
-<div id="container">
-	<div class="shell">
-		
-		<div class="small-nav">
-			<a href="admin/index.php">Dashboard</a>
-			<span>&gt;</span>
-			Add New Property
-		</div>
-		
-		<br />
-		
-		<div id="main">
-			<div class="cl">&nbsp;</div>
-			
-			<div id="content">
+
 				
-				<div class="box">
-					<div class="box-head">
-						<h2>Add New Property</h2>
-					</div>
 					
 					<form action="house_management_edit.php?id=<?php echo $selresult['house_id'] ?>" method="post" enctype="multipart/form-data">
 						
@@ -128,45 +103,24 @@ $selresult = mysqli_fetch_array($select);
 						?>
 					</form>
 					
-				</div>
-
-			</div>
 			
-			<div id="sidebar">
-				
-				<div class="box">
-					
-					<div class="box-head">
-						<h2>Management</h2>
-					</div>
+			
+		
 					
 					<div class="box-content">
-						<a href="house_management.php" class="add-button"><span>View Available Properties</span></a>
+						<a href="../house_management.php" class="add-button"><span>View Available Properties</span></a>
 						<div class="cl">&nbsp;</div>
 						
 						
 						
-						<!-- Sort -->
+					
 						
 						
-					</div>
-				</div>
-			</div>
+					
 			
-			<div class="cl">&nbsp;</div>			
-		</div>
-	</div>
-</div>
+		
 
-<div id="footer">
-	<div class="shell">
-		<span class="left">&copy; <?php echo date("Y");?> Mount Kenya Real Estate Management</span>
-		<span class="right">
-			Designed by Blair</a>
-		</span>
-	</div>
-</div>
-<?php include ".././includes/footer.php"; ?>
+
 	
 </body>
 </html>

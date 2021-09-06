@@ -34,60 +34,31 @@ include_once 'includes/navbar.php';
 	</script>
 </head>
 <body>
-<!-- Header -->
-<div id="header">
-	<div class="shell">
-		
-		<?php
-			
-		?>
-		</div>
-		<!-- End Main Nav -->
-	</div>
-</div>
 
-<div id="container">
-	<div class="shell">
-		
-		<div class="small-nav">
-			<a href="admin_home.php">Dashboard</a>
-			<span>&gt;</span>
-			View Property Management
-		</div>
-		
-		<br />
-		
-		<div id="main">
-			<div class="cl">&nbsp;</div>
-			
-			<div id="content">
-				
-				<div class="box">
-					<!-- Box Head -->
-					<div class="box-head">
-						<h2 class="left">All Properties Available</h2>						
-					</div>	
-					<div class="table">
-						<table width="100%" border="0" cellspacing="0" cellpadding="0">
-							<tr>
-								<th width="13"><input type="checkbox" class="checkbox" /></th>
-								<font color="purple">
-								<th><font color="purple">Property id</font></th>
-								<th><font color="purple">Property type</font></th>
-								
-								<th><font color="purple">Cost</font></th>
-								<th><font color="purple">Property Location</font></th>
-								<th><font color="purple">Location Description</font></th>
-								<th><font color="purple">Maximum Capacity</font></th>
-								<th><font color="purple">Property Status</font></th>
-								
-								<th><font color="purple">Property Image</font></th>
-								<th><font color="purple">agent Name</font></th>
-								<th><font color="purple">agent Contact</font></th>
-								<th width="110" class="ac"><font color="purple">Admin Action</font></th>
-								
 
-							</tr>
+
+
+			
+					<table class="table users">
+					
+						<thead>
+								<th><input type="checkbox" class="checkbox"></th>
+								<th>Property id</th>
+								<th>Property type</th>
+								
+								<th></th>
+								<th>Property Location</th>
+								<th>Location Description</th>
+								<th>Maximum Capacity</th>
+								<th>Property Status</th>
+								
+								<th>Property Image</th>
+								<th>agent Name</th>
+								<th>agent Contact</th>
+								<th>Admin Action</th>
+						</thead>		
+
+							
 							<?php
 								$select = "SELECT * FROM houses";
 								$result = $conn->query($select);
@@ -114,14 +85,12 @@ include_once 'includes/navbar.php';
 							?>
 						</table>
 				
-					</div>
 				
-					<h2><a href="house_print.php"><font color="blue">View Report</font></h2>
-					
-				</div>
+					<h2><a href="house_print.php">View Report</h2>
+				
 				<!-- End Box -->
 
-			</div>
+		
 			<!-- End Content -->
 			
 			<!-- Sidebar -->
