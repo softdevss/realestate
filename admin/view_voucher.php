@@ -44,8 +44,8 @@
                        <td data-label="Particulars NO"><?= $row['particulars']; ?></td>
                        <td data-label="Amount"><?= $row['amount']; ?></td>
                      
-                       <td><a href="view_voucher.php?delete=<?php echo $row['voucher_id']; ?>">Delete</a></td>
-                       </td> 
+               
+                      <td><a href='view_voucher.php?delete=<?= $row['voucher_id']; ?>'>Delete</a></td>
                    </tr>
                   
                <?php } ?>   
@@ -54,18 +54,19 @@
 
    <?php 
 
-   if(isset($_GET['delete'])){
+if(isset($_GET['delete'])){
     
     $the_voucher_id = $_GET['delete'];
-
-    $sql  = "DELETE FROM tblvoucher WHERE voucher_id = {$the_voucher_id} ";
-    $delete_query = mysqli_query($conn,$sql);
     
-    header("location:view_voucher.php");
-    exit;
+    $query  = "DELETE FROM tblvoucher WHERE voucher_id = {$the_voucher_id} ";
+    $delete_query = mysqli_query($conn,$query);
+    
+    header("Location: view_voucher.php");
+    exit();
+    
 
-    }
-
+    
+}
    ?>
   
   
