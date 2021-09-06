@@ -2,8 +2,6 @@
 <?php include "includes/navbar.php" ?>
 
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,8 +13,12 @@
     
 <body>
 
-<form action="view_voucher.php" method="POST">
-<table class="table users"  >
+
+
+<form action="" method="GET">
+
+
+<table class="table users">
               
                <thead>
                    <th>Date</th>
@@ -24,11 +26,12 @@
                    <th>Fullname</th>
                    <th>Particulars</th>
                    <th>Amount</th>    
-                   <th>Actions</th>                
+                   <th>Actions</th>
+                            
                </thead>
                <tbody>
                     <?php
-                    $query = "SELECT * FROM voucher ";    
+                    $query = "SELECT * FROM tblvoucher ORDER by voucher_id DESC ";    
                     $stmt = $conn->prepare($query);
                     $stmt->execute();
                     $result = $stmt->get_result();
@@ -40,80 +43,34 @@
                        <td data-label="Fullname"><?= $row['fullname']; ?></td>
                        <td data-label="Particulars NO"><?= $row['particulars']; ?></td>
                        <td data-label="Amount"><?= $row['amount']; ?></td>
-                 
-                       <td data-label="ACTIONS">
-                       <a href="javascripit:void(0)" class="delete-confirm"><i id="trash" class="fas fa-trash-alt"></i></a>
+                     
+                       <td><a href="view_voucher.php?delete=<?php echo $row['voucher_id']; ?>">Delete</a></td>
                        </td> 
                    </tr>
                   
                <?php } ?>   
            </tbody>
    </table>
-   <script>
 
-$(document).ready(function () {
+   <?php 
 
-    $('.delete-confirm').on('click', function(e){
+   if(isset($_GET['delete'])){
+    
+    $the_voucher_id = $_GET['delete'];
 
-        e.preventDefault();
+    $sql  = "DELETE FROM tblvoucher WHERE voucher_id = {$the_voucher_id} ";
+    $delete_query = mysqli_query($conn,$sql);
+    
+    header("location:view_voucher.php");
+    exit;
 
-        $tr = $(this).closest('tr');
-        var data = $tr.children("td").map(function(){
-            return $(this).text();
-        }).get();
-
-        var deleteid = data[0];
-        
-        swal({
-         title: "Are you sure to delete this voucher?",
-         icon: "warning",
-        buttons: true,
-        dangerMode: true,
-    })
-    .then((willDelete) => {
-    if (willDelete) {
-        
-        $.ajax({
-            type: "POST",
-            url: "view_voucher.php", 
-            data: {
-                "delete_btn_confirm":1,
-                "delete_id_confirm": deleteid,
-            },
-         success: function(result){
-            swal({
-                title: "Successfully Voucher Deleted!",
-                icon: "success",
-            }).then((result) => {
-                location.reload();
-            });
-        }
-        });
-        } 
-        });
-     });
- });
-
-</script>
-
-<?php
-
-if(isset($_POST['delete_btn_confirmd'])){
-    $voucher_id = $_POST['delete_id_confirm'];
-
-    $sqlforVoucher = "DELETE FROM `voucher` WHERE voucher_id =  ";
-  
-    $stmt = mysqli_stmt_init($conn);
-
-    if(!mysqli_stmt_prepare($stmt, $sqlforVoucher)){
-        echo "QUERY FAILED" . mysqli_error($conn);
-    }else{
-        mysqli_stmt_bind_param($stmt,"s",$voucher_id);
-        mysqli_stmt_execute($stmt);
     }
-}
 
-?>
+   ?>
+  
+  
+
+
 
 
 </body>

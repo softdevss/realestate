@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link href="../assets/css/main-design.css" rel="stylesheet">
-   
+
     <title>Document</title>
     <style>
     a{
@@ -32,9 +33,9 @@
 </html>
 <?php
    
+ 
     include "../includes/dbprocess.php";
-
-
+    
     if(isset($_SESSION['nameHolder'])){
         if($_SESSION['usertypeHolder'] == 'Employee'){
             header("Location: ../employee/employee_home.php");

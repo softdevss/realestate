@@ -18,7 +18,7 @@ $sql = "DELETE FROM tblcontact WHERE id='$id'";
 
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
-  header("location: http://localhost/realestate/admin/contact.php");
+  header("location:contact.php");
 } else {
   echo "Error deleting record: " . $conn->error;
 }

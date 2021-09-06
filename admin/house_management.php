@@ -14,18 +14,18 @@ include_once 'includes/navbar.php';
 	<script type="text/javascript">
 		function sureToApprove(id){
 			if(confirm("Are you sure you want to approve this Property?")){
-	            window.location.href='functions/house_management_approve.php?id='+id;	    
+	            window.location.href='house_management_approve.php?id='+id;	    
 			}
 		}
     
 		function sureToDelete(id){
 			if(confirm("Are you sure you want to delete this Property?")){
-				window.location.href='functions/house_management_delete.php?id='+id;
+				window.location.href='house_management_delete.php?id='+id;
 			}
 		}
 		function sureToEdit(id){
 			if(confirm("Are you sure you want to Edit this Property?")){
-				window.location.href='functions/house_management_edit.php?id='+id;
+				window.location.href='house_management_edit.php?id='+id;
 			}
 		}
 
