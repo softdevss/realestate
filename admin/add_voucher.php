@@ -13,7 +13,7 @@ if(isset($_POST['submit'])){
 
     
     
-$query = "INSERT INTO voucher (date, pcv_no, fullname, particulars, amount ) ";
+$query = "INSERT INTO tblvoucher (date, pcv_no, fullname, particulars, amount ) ";
 $query .= "VALUES('{$date}','{$pcv_no}','{$fullname}','{$particulars}','{$amount}' ) ";
 
 $create_user_query = mysqli_query($conn, $query);
@@ -23,7 +23,6 @@ if(!$create_user_query){
 	die('QUERY FAILED'. mysqli_error($conn));
 
 }else{
-
 
 }
 

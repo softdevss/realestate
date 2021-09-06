@@ -1,13 +1,15 @@
-<?php
-	
-	include_once '../../includes/dbprocess.php';
 
-	if(isset($_GET['id']))
-	{
-	$id = $_GET['id'];
-	$select = mysqli_query($conn,"SELECT * FROM houses WHERE house_id = '$id'") or die(mysqli_error($conn));
-	$selresult = mysqli_fetch_array($select);
-	}
+<?php
+
+include "includes/header.php";
+include "includes/navbar.php";
+
+if(isset($_GET['id'])){
+
+$id = $_GET['id'];
+$select = mysqli_query($conn,"SELECT * FROM houses WHERE house_id = '$id'") or die(mysqli_error($conn));
+$selresult = mysqli_fetch_array($select);
+}
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -15,6 +17,8 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<title>Admin Home</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+
+   
 </head>
 <body>
 <div id="header">
@@ -162,6 +166,7 @@
 		</span>
 	</div>
 </div>
+<?php include ".././includes/footer.php"; ?>
 	
 </body>
 </html>

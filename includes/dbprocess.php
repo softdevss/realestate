@@ -169,6 +169,8 @@ if(isset($_POST['activate_btn_confirm'])){
     if(isset($_POST['delete_btn_confirm'])){
 		$EmpID=$_POST['delete_id_confirm'];
 
+        
+
         $sqlforAccounts="DELETE FROM tblaccounts WHERE Employee_ID=?";
         $sqlforProfiles="DELETE FROM tblprofiles WHERE Employee_ID=?";
 
