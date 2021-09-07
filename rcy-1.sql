@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 06, 2021 at 05:01 AM
+-- Generation Time: Sep 07, 2021 at 05:12 AM
 -- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.5
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `php_multiplelogin`
+-- Database: `rcy`
 --
 
 -- --------------------------------------------------------
@@ -97,9 +97,8 @@ CREATE TABLE `tblaccounts` (
 --
 
 INSERT INTO `tblaccounts` (`Employee_ID`, `Fullname`, `User_Type`, `Password`, `Status`) VALUES
-('jeremy@gmail.com', 'Jeremy Prince Andaya', 'Employee', '$2y$10$mamLudESQnybzVW4rN8AtOv0QgARekJkcfxA9nVindYmaflIeK9rK', 'ACTIVE'),
-('justinecusap@gmail.com', 'Justine Cusap', 'User', '$2y$10$g8xZWcPiZGggn6N2tXkD1.mhG5awn8BeBrGqkz1qySuhnURPmENeW', 'ACTIVE'),
-('sakura@yahoo.com', 'Sakura Ann Yanson', 'Admin', '$2y$10$uIrEpfgK4a4bK/JQLZW/ZuC6xvIEi6m4duErCmY3k68xe16c.gED2', 'ACTIVE');
+('jeremy@gmail.com', 'Jeremy Prince Andaya', 'Employee', '$2y$10$BVkqUdmD6Rw8RqQWttqzDuolgVtJ3sMTATLXBVCsreQ0ON84hE3S2', 'ACTIVE'),
+('sakura@yahoo.com', 'Sakura Ann Yanson', 'Admin', '$2y$10$nkC2O5JiDfQ7tUiCgpxCqOBpgs.HFQcOXbW/WwrFwTsy1Mlffzce2', 'ACTIVE');
 
 -- --------------------------------------------------------
 
@@ -120,7 +119,7 @@ CREATE TABLE `tblcontact` (
 --
 
 INSERT INTO `tblcontact` (`id`, `fullname`, `email`, `phone`, `message`) VALUES
-(9, 'justine2', 'justine2@gmail.com', '0923093929', 'hello world\r\n');
+(31, 'asdasd', 'asd@yahoo.com', 'asdasd', 'asdasdawd');
 
 -- --------------------------------------------------------
 
@@ -145,9 +144,30 @@ CREATE TABLE `tblprofiles` (
 --
 
 INSERT INTO `tblprofiles` (`Employee_ID`, `Fullname`, `Position`, `Sex`, `Birthdate`, `ContactNo`, `Email`, `Date_Created`, `Last_Updated`) VALUES
-('jeremy@gmail.com', 'Jeremy Prince Andaya', 'Employee', 'Male', '0000-00-00', '09666235316', 'jeremyprinceandaya07@gmail.com', '2021-09-02', '2021-09-02'),
-('justinecusap@gmail.com', 'Justine Cusap', 'User', 'Male', '0000-00-00', '09666235316', 'justinecusap@gmail.com', '2021-09-02', '2021-09-02'),
-('sakura@yahoo.com', 'Sakura Ann Yanson', 'Admin', 'Female', NULL, '09123456789', 'sakuraannyanson@yahoo.com', '2021-02-05', '2021-09-02');
+('jeremy@gmail.com', 'Jeremy Prince Andaya', 'Employee', 'Male', '0000-00-00', '09666235316', 'jeremyprinceandaya07@gmail.com', '2021-09-02', '2021-09-07'),
+('sakura@yahoo.com', 'Sakura Ann Yanson', 'Admin', 'Female', NULL, '09123456789', 'sakuraannyanson@yahoo.com', '2021-02-05', '2021-09-03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblvoucher`
+--
+
+CREATE TABLE `tblvoucher` (
+  `voucher_id` int(9) NOT NULL,
+  `date` date NOT NULL,
+  `pcv_no` varchar(255) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `particulars` varchar(255) NOT NULL,
+  `amount` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tblvoucher`
+--
+
+INSERT INTO `tblvoucher` (`voucher_id`, `date`, `pcv_no`, `fullname`, `particulars`, `amount`) VALUES
+(30, '2021-09-20', '09832', 'asdasd', 'asdasd', '123123');
 
 --
 -- Indexes for dumped tables
@@ -184,6 +204,12 @@ ALTER TABLE `tblprofiles`
   ADD PRIMARY KEY (`Employee_ID`);
 
 --
+-- Indexes for table `tblvoucher`
+--
+ALTER TABLE `tblvoucher`
+  ADD PRIMARY KEY (`voucher_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -203,7 +229,13 @@ ALTER TABLE `review_table`
 -- AUTO_INCREMENT for table `tblcontact`
 --
 ALTER TABLE `tblcontact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `tblvoucher`
+--
+ALTER TABLE `tblvoucher`
+  MODIFY `voucher_id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
