@@ -16,7 +16,7 @@
 <body>
 
 
-    <table class="table">
+    <table class="table users">
         <thead>
        
             <th>Id</th>
@@ -40,7 +40,7 @@
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['phone'];?></td>
                             <td><?php echo $row['message'];?></td>
-                            <td><a href="./delete_contact.php?a=<?php echo $row['id']; ?>">Delete</a></td>
+                            <td><a href='contact.php?delete=<?= $row['id']; ?>'>Delete</a></td>
                         </tr>
                         <?php
                     }
@@ -55,3 +55,26 @@
   
 </body>
 </html>
+<?php
+
+if(isset($_GET['delete'])){
+    
+    $the_contact_id = $_GET['delete'];
+    
+    $result = mysqli_query($conn,$query);
+    if($result){
+      echo '<script type="text/javascript">
+      swal("", "Successfully Submitted", "success");
+      </script>';
+    }
+    
+    $query  = "DELETE FROM tblcontact WHERE id = {$the_contact_id} ";
+    $delete_query = mysqli_query($conn,$query);
+    
+    header("Location: contact.php");
+    exit();
+    
+
+    
+}
+   ?>
