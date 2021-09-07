@@ -129,6 +129,7 @@
                 required>
                 <span>Don't have account ? <a href="register.php" >Sign up here</a></span>
                 <button type="submit" name="login" class="submit-btn" style="color:white">SIGN IN</button>
+                
                  
 
             </form>
@@ -522,7 +523,7 @@
       $server = "localhost";
       $username = "root";
       $password = "";
-      $dbname = "realestate";
+      $dbname = "rcy";
 
       $fullname = $_POST['name'];
       $email = $_POST['email'];
@@ -535,7 +536,9 @@
       
       $result = mysqli_query($conn,$query);
       if($result){
-       // echo 'Message Sent';
+        echo '<script type="text/javascript">
+        swal("", "Successfully Submitted", "success");
+        </script>';
       }
       else{
         echo 'Message not Sent';

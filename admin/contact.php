@@ -40,7 +40,7 @@
                             <td><?php echo $row['email'];?></td>
                             <td><?php echo $row['phone'];?></td>
                             <td><?php echo $row['message'];?></td>
-                            <td><a href="./del.php?a=<?php echo $row['id']; ?>">Delete</a></td>
+                            <td><a href="./delete_contact.php?a=<?php echo $row['id']; ?>">Delete</a></td>
                         </tr>
                         <?php
                     }

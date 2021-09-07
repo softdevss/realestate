@@ -52,6 +52,7 @@ if(isset($_POST['login'])){
                     $_SESSION ['response'] = "Successfully Login!";
                     $_SESSION ['res_type']= "success";
                     header("Location: ../user/user_home.php");
+                    
 
                 }
                     elseif($UserType == 'Admin'){
