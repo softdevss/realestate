@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="../app.js" defer></script>
     <link rel="stylesheet" href="../styles/admin.css">
     <link rel="stylesheet" href="../fontawesome/css/all.css">

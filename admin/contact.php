@@ -60,7 +60,7 @@
 if(isset($_GET['delete'])){
     
     $the_contact_id = $_GET['delete'];
-    
+
     $result = mysqli_query($conn,$query);
     if($result){
       echo '<script type="text/javascript">

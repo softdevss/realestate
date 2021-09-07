@@ -24,7 +24,9 @@ if(!$create_user_query){
 	die('QUERY FAILED'. mysqli_error($conn));
 
 }else{
-
+	echo '<script type="text/javascript">
+        swal("", "Successfully Submitted", "success");
+        </script>';
 }
 
 }

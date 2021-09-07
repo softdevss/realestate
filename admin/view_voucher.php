@@ -21,6 +21,7 @@
 <table class="table users">
               
                <thead>
+                   <th>VOUCHER ID</th>
                    <th>Date</th>
                    <th>PCV no.</th>
                    <th>Fullname</th>
@@ -38,6 +39,7 @@
                     ?>   
                <?php while ($row = $result->fetch_assoc()) { ?>
                    <tr>
+                   <td data-label="Date"><?= $row['voucher_id']; ?></td>
                        <td data-label="Date"><?= $row['date']; ?></td>
                        <td data-label="PCV no."><?= $row['pcv_no'];?></td>
                        <td data-label="Fullname"><?= $row['fullname']; ?></td>
@@ -45,7 +47,7 @@
                        <td data-label="Amount"><?= $row['amount']; ?></td>
                      
                
-                      <td><a href='view_voucher.php?delete=<?= $row['voucher_id']; ?>'>Delete</a></td>
+                      <td><a href="javascripit:void(0)" class="btn-delete" href='view_voucher.php?delete=<?= $row['voucher_id']; ?>'>Delete</a></td>
                    </tr>
                   
                <?php } ?>   
@@ -69,7 +71,57 @@ if(isset($_GET['delete'])){
 }
    ?>
   
-  
+  <script>
+
+$(document).ready(function () {
+
+    $('.btn-delete').on('click', function(e){
+
+        e.preventDefault();
+
+        $tr = $(this).closest('tr');
+        var data = $tr.children("td").map(function(){
+            return $(this).text();
+        }).get();
+
+        var deleteid = data[0];
+        
+
+        swal({
+         title: "Are you sure to delete this account?",
+         icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    })
+    .then((willDelete) => {
+    if (willDelete) {
+        
+        $.ajax({
+            type: "GET",
+            url: "./view_voucher.php", 
+            data: {
+                "delete":1,
+                "delete": deleteid,
+            },
+         success: function(result){
+            swal({
+                title: "Successfully Account Deleted!",
+                icon: "success",
+            }).then((result) => {
+                location.reload();
+            });
+        }
+});
+   
+} 
+
+});
+    });
+
+});
+
+</script>
+
 
 
 
