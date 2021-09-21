@@ -92,12 +92,12 @@ include_once 'includes/header.php';
                     </div>
                         <div class="heading-name">
                         <h2><?= $row['Fullname']; ?></h2>
-                            <small>Admin</small>
+                            <small>Agent</small>
                             <button class="btn-open" ><i class="far fa-edit">Edit account</i></button>
                         </div>
                         <div class="information">
                             <div class="profile-body">
-                            <small>EMPLOYEE ID</small>
+                            <small>Email Account</small>
                             <h3><?= $row['Employee_ID']; ?></h3>
                             </div>
 
@@ -147,7 +147,7 @@ include_once 'includes/header.php';
                                 <input type="text" name = "Emp_ID" value="<?= $row['Employee_ID']; ?>" required>
                                 <div class="underline">
                         </div>
-                        <label>Employee ID</label>
+                        <label>Email Account</label>
                             </div>
                         </div>
                       

@@ -48,10 +48,23 @@
         
                                     </div>
         
-                                    <a href="#" class="nav__link">
-                                        <i class='bx bx-message-rounded nav__icon' ></i>
-                                        <span class="nav__name">CLIENTS</span>
-                                    </a>
+                                    <div class="nav__dropdown">
+                                        <a href="#" class="nav__link">
+                                            <i class='bx bx-user nav__icon' ></i>
+                                            <span class="nav__name">CLIENT APPLICATION</span>
+                                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                        </a>
+        
+                                        <div class="nav__dropdown-collapse">
+                                            <div class="nav__dropdown-content">
+                                                <a href="#" class="nav__dropdown-item">LOAN LIST</a>
+                                                <a href="#" class="nav__dropdown-item">PAYMENT</a>
+                                                <a href="#" class="nav__dropdown-item">REGISTER</a>
+                                                <a href="#" class="nav__dropdown-item">LOAN PLANS</a>
+                                                <a href="#" class="nav__dropdown-item">LOAN TYPE</a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 
         
                                 <a href="./contact.php" class="nav__link">

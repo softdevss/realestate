@@ -22,6 +22,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
     <link href="../assets/css/main-design.css" rel="stylesheet">
 
+
+
+  
+
+
     <title>RCY REAL HOMES</title>
     <style>
     a{
@@ -59,7 +64,7 @@
                 <img src="../assets/img/admin-sakura.jpg" alt="ADMIN" class="header__img">
                
                 <?php $nameHolder = $_SESSION['nameHolder']; ?>
-                <a href="../admin_home.php" class="header__logo"> <span>MRS.</span> <?php echo $nameHolder ?></a>
+                <a href="../admin_home.php" class="header__logo"> <span></span> <?php echo $nameHolder ?></a>
             
                 <h5></h5>
                
@@ -75,4 +80,19 @@
 
             </div>
             
+
+
+            <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  
+
+ 
+
+
+
+
+
+
+
         </header>

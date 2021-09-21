@@ -1,4 +1,5 @@
-<?php include "includes/header.php" ?>>
+<?php include "includes/header.php" ?>
+<?php include '../includes/dbconnect.php'; ?>
 
         <!--========== NAV ==========-->
             <?php include "includes/navbar.php" ?>
@@ -12,34 +13,44 @@
                        <span><i class="fas fa-layer-group"></i></span>
                    </div> 
                    <div class="card-details">
-                       <h4>MONTHLY SALES</h4>
-                       <h2>P 1,230,000 </h2>
+                       <h4>PAYMENTS TODAY</h4>
+                       <h2><?php  $payments = $conn->query("SELECT sum(amount) as total FROM payments where date(date_created) = '".date("Y-m-d")."'");
+                        echo $payments->num_rows > 0 ? number_format($payments->fetch_array()['total'],2) : "0.00";
+                        ?> </h2>
                    </div>
-                   <p>Total sales </p> 
+                   <a href="clients_application/index.php?page=payments">View Payments</a>
                 </div>
                 <div class="card">
                    <div class="card-icon">
                        <span><i class="fas fa-users"></i></span>
                    </div> 
                    <div class="card-details">
-                       <h4>CLIENTS</h4>
-                       <h2>669</h2>
+                       <h4>CLIENTS TOTAL REGISTER</h4>
+                       <h2> <?php $borrowers = $conn->query("SELECT * FROM borrowers");
+                        echo $borrowers->num_rows > 0 ? $borrowers->num_rows : "0";
+                        ?></h2>
                    </div>
-                   <p>Total clients </p> 
+                   <a href="index.php?page=borrowers">View Clients</a>
                 </div>
                 <div class="card">
                    <div class="card-icon">
                        <span><i class="fas fa-user-secret"></i></span>
                    </div> 
                    <div class="card-details">
-                       <h4>Agents</h4>
-                       <h2>69</h2>
+                       <h4>ACTIVE CLIENTS</h4>
+                       <h2><?php $loans = $conn->query("SELECT * FROM loan_list where status = 2");
+                        echo $loans->num_rows > 0 ? $loans->num_rows : "0";
+                        ?></h2>
                    </div>
-                   <p>Total Agents </p> 
+                   <a href="index.php?page=loans">View Active Clients</a>
                 </div>
+                
             </div>
 
             </div>
+
+
+
                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
                 <script type="text/javascript">
                 google.charts.load("current", {packages:['corechart']});

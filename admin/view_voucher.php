@@ -47,7 +47,7 @@
                        <td data-label="Amount"><?= $row['amount']; ?></td>
                      
                
-                      <td><a href="javascripit:void(0)" class="btn-delete" href='view_voucher.php?delete=<?= $row['voucher_id']; ?>'>Delete</a></td>
+                      <td><a href="javascript:void(0)" class="btn-delete" href='view_voucher.php?delete=<?= $row['voucher_id']; ?>'>Delete</a></td>
                    </tr>
                   
                <?php } ?>   

@@ -650,7 +650,7 @@ $(document).ready(function () {
                         <input type="text" name="EmpID" required>
                         <div class="underline">
                 </div>
-                <label>Employee ID</label>
+                <label>Email Account</label>
                     </div>
                 </div>
                 <div class="wrapper">

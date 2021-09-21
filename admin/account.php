@@ -98,7 +98,7 @@
                         <div class="nav__items">
                             <h3 class="nav__subtitle">SALES</h3>
     
-                            <a href="#" class="nav__link active">
+                            <a href="admin_home.php" class="nav__link active">
                                 <i class='bx bx-home nav__icon' ></i>
                                 <span class="nav__name">DASHBOARD </span>
                             </a>
@@ -211,7 +211,7 @@
                         </div>
                         <div class="information">
                             <div class="profile-body">
-                            <small>EMPLOYEE ID</small>
+                            <small>EMAIL ACCOUNT</small>
                             <h3><?= $row['Employee_ID']; ?></h3>
                             </div>
 
@@ -261,7 +261,7 @@
                                 <input type="text" name = "Emp_ID" value="<?= $row['Employee_ID']; ?>" required>
                                 <div class="underline">
                         </div>
-                        <label>Employee ID</label>
+                        <label>Email Account</label>
                             </div>
                         </div>
                       
