@@ -86,11 +86,11 @@
 		vertical-align: middle !important;
 	}
 	td p{
-		margin: unset
+		margin: unset;
 	}
 	img{
 		max-width:100px;
-		max-height:150px;
+		max-height: 150px;
 	}
 </style>
 <script>

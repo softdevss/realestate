@@ -57,11 +57,11 @@
         
                                         <div class="nav__dropdown-collapse">
                                             <div class="nav__dropdown-content">
-                                                <a href="#" class="nav__dropdown-item">LOAN LIST</a>
-                                                <a href="#" class="nav__dropdown-item">PAYMENT</a>
-                                                <a href="#" class="nav__dropdown-item">REGISTER</a>
-                                                <a href="#" class="nav__dropdown-item">LOAN PLANS</a>
-                                                <a href="#" class="nav__dropdown-item">LOAN TYPE</a>
+                                                <a href="loan/index.php?page=loans" class="nav__dropdown-item">LOAN LIST</a>
+                                                <a href="loan/index.php?page=payments" class="nav__dropdown-item">PAYMENT</a>
+                                                <a href="loan/index.php?page=borrowers" class="nav__dropdown-item">BARROWER</a>
+                                                <a href="loan/index.php?page=plan" class="nav__dropdown-item">LOAN PLANS</a>
+                                                <a href="loan/index.php?page=loan_type" class="nav__dropdown-item">LOAN TYPE</a>
                                             </div>
                                         </div>
                                     </div>

@@ -221,7 +221,7 @@ Class Action {
 				}else{
 					$chk = $this->db->query("SELECT * FROM loan_schedules where loan_id = $id")->num_rows;
 					if($chk > 0){
-						$this->db->query("DELETE FROM loan_schedules where loan_id = $id ");
+						$thi->db->query("DELETE FROM loan_schedules where loan_id = $id ");
 					}
 
 				}

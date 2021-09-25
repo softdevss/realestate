@@ -1,6 +1,35 @@
-Free Download Image Used Links
--https://www.pixelstalk.net/wp-content/uploads/2016/08/Travel-Images-Free-Download.jpg
--https://banner2.cleanpng.com/20180327/fve/kisspng-flight-indonesia-airasia-airasia-japan-airline-tic-asia-5abad146966736.8321896415221927106161.jpg
--https://fontmeme.com/images/Philippine-Airlines-Logo.jpg
--https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0eounwNC8-6-EM4NJLreWW0MamJUhOJsxcA&usqp=CAU
--
+Free Download Source Code "Loan Management System"
+
+FIRST Download
+
+1.XAMPP
+
+2."TEXT EDITOR" NOTEPAD++ OR SUBLIME TEXT 3 / ETC.
+
+3"Loan_Management_System"
+
+4. Download the zip file/ download winrar
+
+5. Extract the file and copy "Loan_Management_System" folder
+
+6.Paste inside root directory/ where you install xammp local disk C: drive D: drive E: paste: (for xampp/htdocs, 
+
+7. Open PHPMyAdmin (http://localhost/phpmyadmin)
+
+8. Create a database with name loan_db
+
+6. Import loan_db.sql file(given inside the zip package in SQL file folder)
+
+7.Run the script http://localhost/Loan_Management_System
+
+
+**LOGIN DETAILS** 
+
+creat your own staff
+ 
+Admin
+user: admin
+pass: admin123
+
+****** www.campcodes.com ******
+Subcribe my You tube Channel **** SerBermz ****

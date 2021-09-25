@@ -1,9 +1,7 @@
 
-<style>
-</style>
 
+<link rel="stylesheet" href="./menu.css">
 
- 
 <div class="nav" id="navbar">
                     <nav class="nav__container">
                         <div>
@@ -62,11 +60,11 @@
         
                                         <div class="nav__dropdown-collapse">
                                             <div class="nav__dropdown-content">
-                                                <a href="#" class="nav__dropdown-item">LOAN LIST</a>
-                                                <a href="#" class="nav__dropdown-item">PAYMENT</a>
-                                                <a href="#" class="nav__dropdown-item">REGISTER</a>
-                                                <a href="#" class="nav__dropdown-item">LOAN PLANS</a>
-                                                <a href="#" class="nav__dropdown-item">LOAN TYPE</a>
+                                                <a href="index.php?page=loans" class="nav__dropdown-item">LOAN LIST</a>
+                                                <a href="index.php?page=payments" class="nav__dropdown-item">PAYMENT</a>
+                                                <a href="index.php?page=borrowers" class="nav__dropdown-item">BARROWER</a>
+                                                <a href="index.php?page=plan" class="nav__dropdown-item">LOAN PLANS</a>
+                                                <a href="index.php?page=loan_type" class="nav__dropdown-item">LOAN TYPE</a>
                                             </div>
                                         </div>
                                     </div>
@@ -125,7 +123,13 @@
                         </a>
                     </nav>
                 </div>
-<!--<nav id="sidebar" class='mx-lt-5 bg-dark' >
+
+
+
+ 
+                   
+
+<!-- <nav id="sidebar" class='mx-lt-5 bg-dark' >
 		
 		<div class="sidebar-list">
 
@@ -135,7 +139,6 @@
 				<a href="index.php?page=borrowers" class="nav-item nav-borrowers"><span class='icon-field'><i class="fa fa-user-friends"></i></span> Borrowers</a>
 				<a href="index.php?page=plan" class="nav-item nav-plan"><span class='icon-field'><i class="fa fa-list-alt"></i></span> Loan Plans</a>	
 				<a href="index.php?page=loan_type" class="nav-item nav-loan_type"><span class='icon-field'><i class="fa fa-th-list"></i></span> Loan Types</a>		
-				 
 				<?php if($_SESSION['login_type'] == 1): ?>
 				<a href="index.php?page=users" class="nav-item nav-users"><span class='icon-field'><i class="fa fa-users"></i></span> Users</a>
 				

@@ -9,6 +9,7 @@
 
 
   <!-- Vendor CSS Files -->
+  
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -20,7 +21,7 @@
   <link href="assets/DataTables/datatables.min.css" rel="stylesheet">
   <link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
   <link href="assets/css/select2.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./menu.css">
+
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
