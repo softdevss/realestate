@@ -108,6 +108,24 @@ ob_start();
                                 <i class='bx bx-message-rounded nav__icon' ></i>
                                 <span class="nav__name">CLIENTS</span>
                             </a>
+
+                            <div class="nav__dropdown">
+                                        <a href="#" class="nav__link">
+                                            <i class='bx bx-user nav__icon' ></i>
+                                            <span class="nav__name">CLIENT APPLICATION</span>
+                                            <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
+                                        </a>
+        
+                                        <div class="nav__dropdown-collapse">
+                                            <div class="nav__dropdown-content">
+                                                <a href="loan/index.php?page=loans" class="nav__dropdown-item">LOAN LIST</a>
+                                                <a href="loan/index.php?page=payments" class="nav__dropdown-item">PAYMENT</a>
+                                                <a href="loan/index.php?page=borrowers" class="nav__dropdown-item">BARROWER</a>
+                                                <a href="loan/index.php?page=plan" class="nav__dropdown-item">LOAN PLANS</a>
+                                                <a href="loan/index.php?page=loan_type" class="nav__dropdown-item">LOAN TYPE</a>
+                                            </div>
+                                        </div>
+                                    </div>
                         
 
                         <a href="./contact.php" class="nav__link">
