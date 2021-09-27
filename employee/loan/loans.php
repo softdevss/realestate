@@ -26,6 +26,8 @@
 							<th class="text-center">Borrower</th>
 							<th class="text-center">Loan Details</th>
 							<th class="text-center">Next Payment Details</th>
+							<th class="text-center">Status</th>
+							<th class="text-center">Action</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -88,8 +90,23 @@
 					 				N/a
 						 		<?php endif; ?>
 						 	</td>
-						 	
-						 
+						 	<td class="text-center">
+						 		<?php if($row['status'] == 0): ?>
+						 			<span class="badge badge-warning">For Approval</span>
+						 		<?php elseif($row['status'] == 1): ?>
+						 			<span class="badge badge-info">Approved</span>
+					 			<?php elseif($row['status'] == 2): ?>
+						 			<span class="badge badge-primary">Released</span>
+					 			<?php elseif($row['status'] == 3): ?>
+						 			<span class="badge badge-success">Completed</span>
+					 			<?php elseif($row['status'] == 4): ?>
+						 			<span class="badge badge-danger">Denied</span>
+						 		<?php endif; ?>
+						 	</td>
+						 	<td class="text-center">
+						 			<button class="btn btn-outline-primary btn-sm edit_loan" type="button" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>
+						 			<button class="btn btn-outline-danger btn-sm delete_loan" type="button" data-id="<?php echo $row['id'] ?>"><i class="fa fa-trash"></i></button>
+						 	</td>
 
 						 </tr>
 
