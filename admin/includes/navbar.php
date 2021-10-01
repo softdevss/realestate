@@ -31,7 +31,7 @@
                                         </div>
                                     </div>
         
-                                    <div class="nav__dropdown">
+                                    <!-- <div class="nav__dropdown">
                                         <a href="#" class="nav__link">
                                             <i class='bx bx-file nav__icon' ></i>
                                             <span class="nav__name">Voucher</span>
@@ -46,7 +46,7 @@
                                             </div>
                                         </div>
         
-                                    </div>
+                                    </div> -->
         
                                     <div class="nav__dropdown">
                                         <a href="#" class="nav__link">

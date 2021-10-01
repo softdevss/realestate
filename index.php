@@ -112,7 +112,7 @@
 
                	
   					<input type="radio" class="radio__input" value="User" name="myradio" id="radio1">
-                    <label class="radio__label " for="radio1">CLIENT</label>
+                  
                     <input class="radio__input" value="Employee" type="radio" name="myradio" id="radio2">
                     <label class="radio__label " for="radio2">AGENT</label>
                     <input class="radio__input" value="Admin" type="radio" name="myradio" id="radio3">
