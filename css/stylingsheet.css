@@ -1168,3 +1168,23 @@ footer{
 
 
 
+.vid-wrapper{
+  width: 100%;
+  max-width: 800px;
+  margin: 3em auto;
+
+}
+.vid-container{
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  position: relative;
+}
+
+.vid-container iframe{
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+}

@@ -28,7 +28,7 @@
     <meta name="author" content="MUSA" >
     <link rel="shortcut icon" href="assets/ico/favicon.png">
 	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
  
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
 
@@ -151,6 +151,7 @@
 				</div>
 	    </div>
         
+      
 
         <!-- /headerwrap -->
 
@@ -177,7 +178,12 @@
 			</div>
 		</div>
 		
-		<!-- ==== ABOUT ==== -->
+    <div class="vid-wrapper">
+      <div class="vid-container">
+         <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fgmanews%2Fvideos%2F1096893304403585%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
+      </div>        
+    </div> 
+      <!-- ==== ABOUT ==== -->
 		<br>
 		
 			<div class="about-flex">
@@ -194,7 +200,7 @@
 				</div>
 			
 			</div>
-
+  
 
 		
 		<section class="section-divider textdivider divider1">
