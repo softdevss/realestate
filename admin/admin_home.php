@@ -83,7 +83,7 @@
 
                 var options = {
                 title: "Sales for the year",
-                width: 1200,
+                width: 1000,
                 height: 250,
                 bar: {groupWidth: "90%"},
                 legend: { position: "none" },

@@ -21,7 +21,7 @@
   <link href="assets/DataTables/datatables.min.css" rel="stylesheet">
   <link href="assets/css/jquery.datetimepicker.min.css" rel="stylesheet">
   <link href="assets/css/select2.min.css" rel="stylesheet">
-
+  <link href="./loan-design.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">

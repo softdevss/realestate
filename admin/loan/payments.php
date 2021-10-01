@@ -1,17 +1,17 @@
 <?php include 'db_connect.php' ?>
 
-<div class="container-fluid">
+<div class="size">
 	<div class="col-lg-12">
 		<div class="card">
 			<div class="card-header">
-				<large class="card-title">
-					<b>Payment List</b>
-					<button class="btn btn-primary btn-sm btn-block col-md-2 float-right" type="button" id="new_payments"><i class="fa fa-plus"></i> New Payment</button>
-				</large>
+				<div class="card-title">
 				
+					<button class="btn btn-primary btn-sm btn-block col-md-2 float-left" type="button" id="new_payments"><i class="fa fa-plus"></i> New Payment</button>
+					</div>
+				</div>
 			</div>
 			<div class="card-body">
-				<table class="table table-bordered" id="loan-list">
+				<table class="table" id="loan-list">
 					<colgroup>
 						<col width="10%">
 						<col width="25%">
@@ -20,7 +20,7 @@
 						<col width="10%">
 						<col width="10%">
 					</colgroup>
-					<thead>
+					<thead class="color"> 
 						<tr>
 							<th class="text-center">#</th>
 							<th class="text-center">Loan Reference No</th>
@@ -68,17 +68,12 @@
 					</tbody>
 				</table>
 			</div>
-		</div>
+		
 	</div>
 </div>
 <style>
-	td p {
-		margin:unset;
-	}
-	td img {
-	    width: 8vw;
-	    height: 12vh;
-	}
+
+	
 	td{
 		vertical-align: middle !important;
 	}

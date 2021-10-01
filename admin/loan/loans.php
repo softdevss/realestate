@@ -1,17 +1,19 @@
 <?php include 'db_connect.php' ?>
 
-<div class="container-fluid">
+
+
+
+<div class=" size">
 	<div class="col-lg-12">
-		<div class="card">
+		<div class="card ">
 			<div class="card-header">
-				<large class="card-title">
-					<b>Loan List</b>
-					<button class="btn btn-primary btn-sm btn-block col-md-2 float-right" type="button" id="new_application"><i class="fa fa-plus"></i> Create New Application</button>
-				</large>
-				
+				<div class="card-title">
+					<button class="btn btn-primary btn-sm btn-block col-md-2 float-left" type="button" id="new_application"><i class="fa fa-plus"></i> Create New Application</button>
+				</div>
+				</div>
 			</div>
 			<div class="card-body">
-				<table class="table table-bordered" id="loan-list">
+				<table class="table" id="loan-list">
 					<colgroup>
 						<col width="10%">
 						<col width="25%">
@@ -20,9 +22,9 @@
 						<col width="10%">
 						<col width="10%">
 					</colgroup>
-					<thead>
+					<thead  class="color">
 						<tr>
-							<th class="text-center">#</th>
+							<th class="text-center">No</th>
 							<th class="text-center">Borrower</th>
 							<th class="text-center">Loan Details</th>
 							<th class="text-center">Next Payment Details</th>
@@ -62,15 +64,15 @@
 						 	
 						 	<td class="text-center"><?php echo $i++ ?></td>
 						 	<td>
-						 		<p>Name :<b><?php echo $row['name'] ?></b></p>
-						 		<p><small>Contact # :<b><?php echo $row['contact_no'] ?></small></b></p>
-						 		<p><small>Address :<b><?php echo $row['address'] ?></small></b></p>
+						 		<p>Name :<b><?php echo  $row['name'] ?></b></p>
+						 		<p><small>Contact # :<b><?php echo  $row['contact_no'] ?></small></b></p>
+						 		<p><small>Address :<b><?php echo  $row['address'] ?></small></b></p>
 						 	</td>
 						 	<td>
-						 		<p>Reference :<b><?php echo $row['ref_no'] ?></b></p>
-						 		<p><small>Loan type :<b><?php echo $type_arr[$row['loan_type_id']] ?></small></b></p>
-						 		<p><small>Plan :<b><?php echo $plan_arr[$row['plan_id']]['plan'] ?></small></b></p>
-						 		<p><small>Amount :<b><?php echo $row['amount'] ?></small></b></p>
+						 		<p>Reference :<b><?php echo  $row['ref_no'] ?></b></p>
+						 		<p><small>Loan type :<b><?php echo  $type_arr[$row['loan_type_id']] ?></small></b></p>
+						 		<p><small>Plan :<b><?php echo  $plan_arr[$row['plan_id']]['plan'] ?></small></b></p>
+						 		<p><small>Amount :<b><?php echo  $row['amount'] ?></small></b></p>
 						 		<p><small>Total Payable Amount :<b><?php echo number_format($monthly * $plan_arr[$row['plan_id']]['months'],2) ?></small></b></p>
 						 		<p><small>Monthly Payable Amount: <b><?php echo number_format($monthly,2) ?></small></b></p>
 						 		<p><small>Overdue Payable Amount: <b><?php echo number_format($penalty,2) ?></small></b></p>
@@ -113,17 +115,19 @@
 						<?php endwhile; ?>
 					</tbody>
 				</table>
-			</div>
-		</div>
+			
+		
 	</div>
 </div>
 <style>
+	
+	table{}
 	td p {
-		margin:unset;
+	
 	}
 	td img {
-	    width: 8vw;
-	    height: 12vh;
+	 
+	  
 	}
 	td{
 		vertical-align: middle !important;

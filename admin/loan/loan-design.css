@@ -1,0 +1,14 @@
+
+.size{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  transform: translate(-14%,-2%);
+    max-width: 100%;
+  
+}
+.color{
+    background-color: #2f89fc ;
+    color: #ffff;
+    border: 0;
+}
