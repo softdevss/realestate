@@ -1,13 +1,19 @@
 <?php include 'db_connect.php' ?>
 <?php 
 extract($_POST);
-if(isset($employee_id)){
-	$qry = $conn->query("SELECT * FROM payments where id=".$employee_id);
+if(isset($paymend_id)){
+
+
+	$qry = $conn->query("SELECT * FROM payments where id = ". $paymend_id);
+	
 	foreach($qry->fetch_array() as $k => $val){
+	
 		$$k = $val;
 	}
 }
+
 $loan = $conn->query("SELECT l.*,concat(b.lastname,', ',b.firstname,' ',b.middlename)as name, b.contact_no, b.address from loan_list l inner join borrowers b on b.id = l.borrower_id where l.id = ".$loan_id);
+
 foreach($loan->fetch_array() as $k => $v){
 	$meta[$k] = $v;
 }

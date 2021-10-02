@@ -18,7 +18,7 @@
                         echo $payments->num_rows > 0 ? number_format($payments->fetch_array()['total'],2) : "0.00";
                         ?> </h2>
                    </div>
-                   <a href="clients_application/index.php?page=payments">View Payments</a>
+                   <a href="./loan/index.php?page=payments">View Payments</a>
                 </div>
                 <div class="card">
                    <div class="card-icon">
@@ -30,7 +30,7 @@
                         echo $borrowers->num_rows > 0 ? $borrowers->num_rows : "0";
                         ?></h2>
                    </div>
-                   <a href="index.php?page=borrowers">View Clients</a>
+                   <a href="./loan/index.php?page=borrowers">View Clients</a>
                 </div>
                 <div class="card">
                    <div class="card-icon">
@@ -42,58 +42,13 @@
                         echo $loans->num_rows > 0 ? $loans->num_rows : "0";
                         ?></h2>
                    </div>
-                   <a href="index.php?page=loans">View Active Clients</a>
+                   <a href="./loan/index.php?page=loans">View Active Clients</a>
                 </div>
                 
             </div>
 
             </div>
 
-
-
-                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-                <script type="text/javascript">
-                google.charts.load("current", {packages:['corechart']});
-                google.charts.setOnLoadCallback(drawChart);
-                function drawChart() {
-                var data = google.visualization.arrayToDataTable([
-                ["Element", "Sales", { role: "style" } ],
-                ["January", 5, "#f5587b"],
-                ["February", 20.49, "#f5587b"],
-                ["March", 19.30, "#f5587b"],
-                ["April", 21.45, "color: #f5587b"],
-                ["May", 12, "#f5587b"],
-                ["June", 10.49, "#f5587b"],
-                ["July", 22.30, "#f5587b"],
-                ["August", 21.45, "color: #f5587b"],
-                ["September", 5, "#f5587b"],
-                ["October", 10.49, "#f5587b"],
-                ["November", 19.30, "#f5587b"],
-                ["December", 21.45, "color: #f5587b"]
-                
-                ]);
-
-                var view = new google.visualization.DataView(data);
-                view.setColumns([0, 1,
-                { calc: "stringify",
-                sourceColumn: 1,
-                type: "string",
-                role: "annotation" },
-                2]);
-
-                var options = {
-                title: "Sales for the year",
-                width: 1000,
-                height: 250,
-                bar: {groupWidth: "90%"},
-                legend: { position: "none" },
-                };
-                var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
-                chart.draw(view, options);
-                }
-                </script>
-                <div id="columnchart_values" style="width:100vw; height: 300px; max-width:100%;"></div>
-      </script>
             </div> 
         </main>
 

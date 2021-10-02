@@ -30,15 +30,15 @@
                                 </div>
                             </div>
 
-                            <a href="#" class="nav__link">
+                            <!--<a href="#" class="nav__link">
                                 <i class='bx bx-message-rounded nav__icon' ></i>
                                 <span class="nav__name">CLIENTS</span>
-                            </a>
+                            </a>-->
 
                             <div class="nav__dropdown">
                                         <a href="#" class="nav__link">
-                                            <i class='bx bx-user nav__icon' ></i>
-                                            <span class="nav__name">CLIENT APPLICATION</span>
+                                            <i class='bx bx-money nav__icon' ></i>
+                                            <span class="nav__name">CLIENT BILLING</span>
                                             <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
                                         </a>
         
@@ -53,10 +53,10 @@
                                         </div>
                                     </div>
 
-                                    <a href="database.php" class="nav__link">
+                                   <!-- <a href="database.php" class="nav__link">
                                         <i class='bx bx-data nav__icon' ></i>
                                         <span class="nav__name">DATABASE</span>
-                                    </a>
+                                    </a>-->
                         
 
                         <a href="./contact.php" class="nav__link">
@@ -70,9 +70,9 @@
 
     
                         <div class="nav__items">
-                            <h3 class="nav__subtitle">AGENTS</h3>
+                            <h3 class="nav__subtitle">ACCOUNT</h3>
     
-                            <div class="nav__dropdown">
+                            <!--<div class="nav__dropdown">
                                 <a href="#" class="nav__link">
                                     <i class='bx bx-bell nav__icon' ></i>
                                     <span class="nav__name">COMISSION</span>
@@ -97,7 +97,7 @@
                             <a href="#" class="nav__link">
                                 <i class='bx bx-bookmark nav__icon' ></i>
                                 <span class="nav__name">REPORTS</span>
-                            </a>
+                            </a>-->
 
                             <a href="account.php" class="nav__link">
                                 <i class='bx bx-user nav__icon' ></i>

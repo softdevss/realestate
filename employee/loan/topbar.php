@@ -8,6 +8,9 @@
     color: #000000b3;
 
 }
+.navbar{
+  display: none;
+}
 
 .kulay-blue{
 
