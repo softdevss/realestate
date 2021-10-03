@@ -109,12 +109,19 @@ a.active,a:hover{
   #check:checked ~ ul{
     left: 0;
   }
+
+  .cover-background .header-content h3{
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    
+  }
 }
 
 
 .header-content h3{
   padding: 1rem;
-    font-size: 6rem;
+    font-size: 5rem;
     color: #fff;
     font-weight: 700;
     text-align: left;
@@ -135,10 +142,11 @@ a.active,a:hover{
 }
 
 .about-flex{
+  padding: 1rem;
   max-width: 90%;
   display: flex;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: justify;
  justify-content: center;
  flex-wrap: wrap;
 
@@ -154,7 +162,9 @@ a.active,a:hover{
  border-radius: 20px;
 }
 .img-content{
+  
 flex: 1;
+padding: 2rem;
 text-align: left;
 font-size: 1.8rem;
 font-family: 'poppins';
@@ -166,6 +176,7 @@ margin: 1rem;
   font-weight: 600;
   color: rgb(255, 92, 203);
   text-transform: uppercase;
+
 }
 
 .call:hover {
@@ -190,6 +201,7 @@ margin: 1rem;
   
 }
 .fb-button{
+  display: block;
   width: 200px;
   height: 50px;
   background: #303a52;
@@ -1169,16 +1181,21 @@ footer{
 
 
 .vid-wrapper{
-  width: 100%;
-  max-width: 800px;
+  width: 1300px;
+  max-width: 100%;
   margin: 6rem auto;
-
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  
 }
 .vid-container{
-  width: 100%;
+  
+ width: 700px;
   max-width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-bottom: 46.25%;
   position: relative;
 }
 
@@ -1187,4 +1204,34 @@ footer{
   max-width: 100%;
   height: 100%;
   position: absolute;
+  
+}
+.content-wrapper{
+ width: 550px;
+ padding: 1rem;
+margin-bottom: 1.6rem;
+}
+.content-wrapper h3{
+  text-transform: uppercase;
+  color: #595a5c;
+  font-size: 3rem;
+  font-family: 'montserrat';
+  font-weight: 700;
+  letter-spacing:3px;
+}
+
+.content-wrapper p{
+ 
+  color: #595a5c;
+  font-size: 1.3rem;
+  font-family: 'montserrat';
+}
+ 
+@media screen and (max-width : 756px) {
+  .content-wrapper h3{
+    text-align: center;
+    font-size:2rem;
+    margin: auto;
+  }
+  
 }

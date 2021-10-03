@@ -146,7 +146,7 @@
 		<!-- ==== HEADERWRAP ==== -->
 	    <div id="headerwrap" class="cover-background" id="home" name="home">
 				<div class="header-content">
-					<h3>Dream <br><span>Home</span> is <br>Right Here</h3>
+					<h3> Your dream  <br><span>Home</span> is <br> a Reality</h3>
 				</div>
 	    </div>
         
@@ -178,11 +178,31 @@
 		</div>
 		
     <div class="vid-wrapper">
+
+      <div class="content-wrapper">
+        <h3>RCY REALHOMES your dream home is a REALITY! </h3>
+        <p>We are a privately owned real estate development. Our goal is to provide affordable and
+           high standard quality housing projects fellow Zamboangeños with exceptional service and customer satisfaction always in mind. </p>
+
+           <p>We believe in building trust, sustainability, good working relationships and a strong sense of faith – core values that set us apart from the rest. All these fuel our mission and vision to build the dream home that you and your family truly deserves.
+Since 2016, RCY REALHOMES has established a total of thirteen site development projects located at prominent barangays across the City of Zamboanga. </p>
+      </div>
+
+
       <div class="vid-container">
       <iframe src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fsoftwaredevsystem%2Fvideos%2F681758816549797%2F&show_text=false&width=560&t=0" width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true"></iframe>
       </div>        
     </div> 
       <!-- ==== ABOUT ==== -->
+	<!-- ==== SECTION DIVIDER2 -->
+  <section class="section-divider textdivider divider2">
+			<div class="container text-left">
+				<h1>WE BUILD TRUST</h1>
+				
+		<p>New to this industry we aim to exceed beyond our client <br> expectations by giving them only the best. <br> We value our relationship with our clients to <br> communicate honestly <br> and with excellent communication <br> customer service and attention.</p>
+			</div><!-- container -->
+		</section><!-- section -->
+      
 		<br>
 		
 			<div class="about-flex">
@@ -327,14 +347,7 @@
 		</div> -->
 
 
-		<!-- ==== SECTION DIVIDER2 -->
-		<section class="section-divider textdivider divider2">
-			<div class="container text-left">
-				<h1>WE BUILD TRUST</h1>
-				
-		<p>New to this industry we aim to exceed beyond our client <br> expectations by giving them only the best. <br> We value our relationship with our clients to <br> communicate honestly <br> and with excellent communication <br> customer service and attention.</p>
-			</div><!-- container -->
-		</section><!-- section -->
+	
 
 		<!-- ==== GREYWRAP ==== -->
 		<!-- <div id="greywrap">
