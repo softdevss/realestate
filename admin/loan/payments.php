@@ -7,8 +7,18 @@
 				<div class="card-title">
 				
 					<button class="btn btn-primary btn-sm btn-block col-md-2 float-left" type="button" id="new_payments"><i class="fa fa-plus"></i> New Payment</button>
+					<div class="col-md-12 head">
+
+<div class="float-right">
+  
+  <a href="export.php" class="btn btn-success"><i class="dwn">Export</a>
+
+</div>
+
+</div>
 					</div>
 				</div>
+				
 			</div>
 			<div class="card-body">
 				<table class="table" id="loan-list">
@@ -27,6 +37,12 @@
 							<th class="text-center">Payee</th>
 							<th class="text-center">Amount</th>
 							<th class="text-center">Penalty</th>
+							<th class="text-center">Over Due
+								<h6>0=no, 1=yes</h6>
+
+							</th>
+							<th class="text-center">Date created</th>
+
 							<th class="text-center">Action</th>
 						</tr>
 					</thead>
@@ -56,6 +72,14 @@
 						 	</td>
 						 	<td class="text-center">
 						 		<?php echo number_format($row['penalty_amount'],2) ?>
+						 	</td>
+							 <td class="text-center">
+						 		<?php echo $row['overdue'] ?>
+						 	</td>
+
+							 <td>
+						 		<?php echo $row['date_created'] ?>
+						 		
 						 	</td>
 						 	<td class="text-center">
 						 			<button class="btn btn-outline-primary btn-sm edit_payment" type="button" data-id="<?php echo $row['id'] ?>"><i class="fa fa-edit"></i></button>

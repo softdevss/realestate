@@ -12,22 +12,22 @@ function filterData(&$str){
 
 }
 
-$filename = "loan-list" . date('Y-m-d') . ".xls";
+$filename = "payment-list" . date('Y-m-d') . ".xls";
 
-$fields = array('ID', 'REF_NO', 'LOAN_TYPE_ID', 'BORROWER_ID', 'PURPOSE', 'AMOUNT', 'PLAN_ID', 'STATUS', 'DATE_RELEASE', 'DATE_CREATE');
+$fields = array('ID', 'LOAN_REFERENCE NO', 'PAYEE', 'AMOUNT', 'PENALTY', 'OVER_DUE', 'DATE_CREATED');
 
 $excelData = implode("\t", array_values($fields)) . "\n";
 
 
 
-$query = $conn->query("SELECT * FROM loan_list ORDER BY id ASC");
+$query = $conn->query("SELECT * FROM payments ORDER BY id ASC");
 
 if($query->num_rows > 0){
      
     while($row = $query->fetch_assoc()){
 
-        $status = ($row['status'] == 1)?'confirm':'inactive';
-        $lineData = array($row['id'], $row['ref_no'], $row['loan_type_id'], $row['borrower_id'], $row['purpose'], $row['amount'], $row['plan_id'], $row['status'], $row['date_released'], $row['date_created']);
+        $status = ($row['overdue'] == 1)?'confirm':'inactive';
+        $lineData = array($row['id'], $row['loan_id'], $row['payee'], $row['amount'], $row['penalty_amount'], $row['overdue'], $row['date_created']);
     
         array_walk($lineData, 'filterData');
         $excelData .= implode("\t", array_values($lineData)) . "\n";
