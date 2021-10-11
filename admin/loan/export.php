@@ -12,11 +12,11 @@ function filterData(&$str){
 
 }
 
-$filename = "loanlist" . date('Y-m-d') . ".xls";
+$filename = "loan-list" . date('Y-m-d') . ".xls";
 
-$fields = array ('id', 'ref_no', 'loan_type_id', 'borrower_id', 'purpose', 'amount', 'plan_id', 'status', 'date_released', 'date_created');
+$fields = array('ID', 'REF_NO', 'LOAN_TYPE_ID', 'BORROWER_ID', 'PURPOSE', 'AMOUNT', 'PLAN_ID', 'STATUS', 'DATE_RELEASE', 'DATE_CREATE');
 
-$exceldata = implode ("\t", array_values($fields)) . "\n";
+$excelData = implode("\t", array_values($fields)) . "\n";
 
 
 
@@ -30,17 +30,17 @@ if($query->num_rows > 0){
         $lineData = array($row['id'], $row['ref_no'], $row['loan_type_id'], $row['borrower_id'], $row['purpose'], $row['amount'], $row['plan_id'], $row['status'], $row['date_released'], $row['date_created']);
     
         array_walk($lineData, 'filterData');
-        $exceldata = implode("\t", array_values($lineData)) . "\n";
+        $excelData .= implode("\t", array_values($lineData)) . "\n";
     }
 }else{
 
-    $exceldata .= 'No record found.....'. "\n";
+    $excelData .= 'No record found.....'. "\n";
 }
 
 header("Content-type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=\"$filename\"");
 
-echo $exceldata;
+echo $excelData;
 
 exit;
 
