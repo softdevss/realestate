@@ -45,6 +45,15 @@
 
   </main>
 
+  <div class="col-md-12 head">
+
+    <div class="float-right">
+      
+      <a href="export.php" class="btn btn-success"><i class="dwn">Export</a>
+
+    </div>
+
+  </div>
   <div id="preloader"></div>
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
